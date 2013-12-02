@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HadithBooks/HadithSourcesViewController.cs">
+    <Files>
+      <File FileName="HadithBooks/HadithSourceTable.cs" Line="36" Column="1" />
+      <File FileName="HadithBooks/HadithSourcesViewController.cs" Line="71" Column="16" />
+      <File FileName="HadithBooks/BooksViewController.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/BooksTable.cs" Line="35" Column="76" />
+      <File FileName="HadithBooks/NarrationViewController.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/AppDelegate.cs" Line="29" Column="57" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
