@@ -28,6 +28,8 @@ namespace HadithBooks
 
 		public override void ViewDidLoad ()
 		{
+
+//			تظهر باللغة العربية
 			base.ViewDidLoad ();
 
 			int yPosition = 0;

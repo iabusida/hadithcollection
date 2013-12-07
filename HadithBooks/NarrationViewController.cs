@@ -14,6 +14,7 @@ namespace HadithBooks
 		private List<Book> HadithBooks = null;
 		private int CurrentBook;
 		private int CurrentNarration = 0;
+		private string show_in_arabic_key = "show_in_arabic_narration";
 		public NarrationViewController () : base ("NarrationViewController", null)
 		{
 
@@ -94,21 +95,34 @@ namespace HadithBooks
 
 		}
 
+		partial void btnLanguage (MonoTouch.Foundation.NSObject sender)
+		{
+			bool isArabic = NSUserDefaults.StandardUserDefaults.BoolForKey(show_in_arabic_key) ? false : true;
+			NSUserDefaults.StandardUserDefaults.SetBool (isArabic, show_in_arabic_key);
+			NSUserDefaults.StandardUserDefaults.Synchronize();
+			updateScreen();
+
+		}
+
 		private void updateScreen()
 		{
 
+
 			Regex regex = new Regex(@"[ ]{2,}", RegexOptions.None);     
-			if (NSUserDefaults.StandardUserDefaults.BoolForKey ("arabicmode")) 
+			if (NSUserDefaults.StandardUserDefaults.BoolForKey(show_in_arabic_key)) 
 			{
 				txtNarrationDetails.Text = NarrationList [CurrentNarration].ArabicDetails;
-//				lblBookName.Text = this.HadithBooks [CurrentBook].ArabicTitle;
 				lblTitle.Text = this.HadithBooks [CurrentBook].ArabicTitle;
+				bntLanguageMode.SetTitle ("Show in English", UIControlState.Normal);
+
 			} 
 			else
 			{
 				var narration = regex.Replace(NarrationList [CurrentNarration].EnglishDetails,@" ").Trim();
 				txtNarrationDetails.Text = narration;
 				lblTitle.Text = this.HadithBooks [CurrentBook].EnglishTitle;
+				bntLanguageMode.SetTitle ("تظهر باللغة العربية", UIControlState.Normal);
+
 			}
 
 		}

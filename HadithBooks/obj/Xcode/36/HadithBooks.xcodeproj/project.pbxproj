@@ -1,0 +1,274 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B869DBC00000000000000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B15EA60000000000000000 /* UIKit.framework */; };
+		7F5911E00000000000000000 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D426B440000000000000000 /* MapKit.framework */; };
+		464848000000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D377E2000000000000000000 /* Foundation.framework */; };
+		9FE8C4800000000000000000 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F98E600000000000000000 /* CoreGraphics.framework */; };
+		208723380000000000000000 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23E54CBA0000000000000000 /* Default-568h@2x.png */; };
+		1CF6169A0000000000000000 /* bg_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 277659580000000000000000 /* bg_small.png */; };
+		196509FC0000000000000000 /* hadithCover.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0765F60000000000000000 /* hadithCover.png */; };
+		15D3FD5E0000000000000000 /* HadithSourcesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9872940000000000000000 /* HadithSourcesViewController.xib */; };
+		1242F0C00000000000000000 /* BooksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32297F320000000000000000 /* BooksViewController.xib */; };
+		EB1E42200000000000000000 /* NarrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35BA8BD00000000000000000 /* NarrationViewController.xib */; };
+		B20D78400000000000000000 /* hadith.db in Resources */ = {isa = PBXBuildFile; fileRef = 394B986E0000000000000000 /* hadith.db */; };
+		78FCAE600000000000000000 /* cell_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CDCA50C0000000000000000 /* cell_bg.png */; };
+		3FEBE4800000000000000000 /* HadithBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB1AA000000000000000000 /* HadithBookCell.xib */; };
+		27DC1F900000000000000000 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 24182FD60000000000000000 /* AppDelegate.h */; };
+		244B12F20000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A93C740000000000000000 /* AppDelegate.m */; };
+		20BA06540000000000000000 /* HadithSourcesViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B3A49120000000000000000 /* HadithSourcesViewController.h */; };
+		1D28F9B60000000000000000 /* HadithSourcesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ECB55B00000000000000000 /* HadithSourcesViewController.m */; };
+		1997ED180000000000000000 /* BooksViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 325C624E0000000000000000 /* BooksViewController.h */; };
+		1606E07A0000000000000000 /* BooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35ED6EEC0000000000000000 /* BooksViewController.m */; };
+		1275D3DC0000000000000000 /* NarrationViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 397E7B8A0000000000000000 /* NarrationViewController.h */; };
+		EE4C73E00000000000000000 /* NarrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F88280000000000000000 /* NarrationViewController.m */; };
+		B53BAA000000000000000000 /* HadithBookCell.h in Sources */ = {isa = PBXBuildFile; fileRef = A094C6000000000000000000 /* HadithBookCell.h */; };
+		7C2AE0200000000000000000 /* HadithBookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 431A16400000000000000000 /* HadithBookCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		362052080000000000000000 /* HadithBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "HadithBooks.app"; path = "HadithBooks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		39B15EA60000000000000000 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; };
+		3D426B440000000000000000 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; };
+		D377E2000000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
+		D8F98E600000000000000000 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreGraphics.framework"; path = "System/Library/Frameworks/CoreGraphics.framework"; sourceTree = SDKROOT; };
+		23E54CBA0000000000000000 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		277659580000000000000000 /* bg_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg_small.png"; path = "bg_small.png"; sourceTree = "<group>"; };
+		2B0765F60000000000000000 /* hadithCover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hadithCover.png"; path = "hadithCover.png"; sourceTree = "<group>"; };
+		2E9872940000000000000000 /* HadithSourcesViewController.xib */ = {isa = PBXFileReference; name = "HadithSourcesViewController.xib"; path = "HadithSourcesViewController.xib"; sourceTree = "<group>"; };
+		32297F320000000000000000 /* BooksViewController.xib */ = {isa = PBXFileReference; name = "BooksViewController.xib"; path = "BooksViewController.xib"; sourceTree = "<group>"; };
+		35BA8BD00000000000000000 /* NarrationViewController.xib */ = {isa = PBXFileReference; name = "NarrationViewController.xib"; path = "NarrationViewController.xib"; sourceTree = "<group>"; };
+		394B986E0000000000000000 /* hadith.db */ = {isa = PBXFileReference; name = "hadith.db"; path = "hadith.db"; sourceTree = "<group>"; };
+		3CDCA50C0000000000000000 /* cell_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cell_bg.png"; path = "cell_bg.png"; sourceTree = "<group>"; };
+		6DB1AA000000000000000000 /* HadithBookCell.xib */ = {isa = PBXFileReference; name = "HadithBookCell.xib"; path = "HadithBookCell.xib"; sourceTree = "<group>"; };
+		24182FD60000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
+		27A93C740000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
+		2B3A49120000000000000000 /* HadithSourcesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HadithSourcesViewController.h"; path = "HadithSourcesViewController.h"; sourceTree = "<group>"; };
+		2ECB55B00000000000000000 /* HadithSourcesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "HadithSourcesViewController.m"; path = "HadithSourcesViewController.m"; sourceTree = "<group>"; };
+		325C624E0000000000000000 /* BooksViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "BooksViewController.h"; path = "BooksViewController.h"; sourceTree = "<group>"; };
+		35ED6EEC0000000000000000 /* BooksViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "BooksViewController.m"; path = "BooksViewController.m"; sourceTree = "<group>"; };
+		397E7B8A0000000000000000 /* NarrationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NarrationViewController.h"; path = "NarrationViewController.h"; sourceTree = "<group>"; };
+		3D0F88280000000000000000 /* NarrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NarrationViewController.m"; path = "NarrationViewController.m"; sourceTree = "<group>"; };
+		A094C6000000000000000000 /* HadithBookCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HadithBookCell.h"; path = "HadithBookCell.h"; sourceTree = "<group>"; };
+		431A16400000000000000000 /* HadithBookCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "HadithBookCell.m"; path = "HadithBookCell.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		721103900000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B869DBC00000000000000000 /* UIKit.framework in Frameworks */,
+				7F5911E00000000000000000 /* MapKit.framework in Frameworks */,
+				464848000000000000000000 /* Foundation.framework in Frameworks */,
+				9FE8C4800000000000000000 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		261E10C20000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				B77A3AF00000000000000000 /* HadithBooks */,
+				162AC9890000000000000000 /* Frameworks */,
+				30D1369C0000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		30D1369C0000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				362052080000000000000000 /* HadithBooks.app */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		162AC9890000000000000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39B15EA60000000000000000 /* UIKit.framework */,
+				3D426B440000000000000000 /* MapKit.framework */,
+				D377E2000000000000000000 /* Foundation.framework */,
+				D8F98E600000000000000000 /* CoreGraphics.framework */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		B77A3AF00000000000000000 /* HadithBooks */ = {
+			isa = PBXGroup;
+			children = (
+				24182FD60000000000000000 /* AppDelegate.h */,
+				277659580000000000000000 /* bg_small.png */,
+				325C624E0000000000000000 /* BooksViewController.h */,
+				32297F320000000000000000 /* BooksViewController.xib */,
+				3CDCA50C0000000000000000 /* cell_bg.png */,
+				23E54CBA0000000000000000 /* Default-568h@2x.png */,
+				394B986E0000000000000000 /* hadith.db */,
+				A094C6000000000000000000 /* HadithBookCell.h */,
+				6DB1AA000000000000000000 /* HadithBookCell.xib */,
+				2B0765F60000000000000000 /* hadithCover.png */,
+				2B3A49120000000000000000 /* HadithSourcesViewController.h */,
+				2E9872940000000000000000 /* HadithSourcesViewController.xib */,
+				397E7B8A0000000000000000 /* NarrationViewController.h */,
+				35BA8BD00000000000000000 /* NarrationViewController.xib */,
+				309E53800000000000000000 /* Supporting Files */,
+			);
+			name = "HadithBooks";
+			sourceTree = "<group>";
+		};
+		309E53800000000000000000 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27A93C740000000000000000 /* AppDelegate.m */,
+				35ED6EEC0000000000000000 /* BooksViewController.m */,
+				431A16400000000000000000 /* HadithBookCell.m */,
+				2ECB55B00000000000000000 /* HadithSourcesViewController.m */,
+				3D0F88280000000000000000 /* NarrationViewController.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B6AEAE80000000000000000 /* HadithBooks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 361157FB0000000000000000 /* Build configuration list for PBXNativeTarget "HadithBooks" */;
+			buildPhases = (
+				2B6D2C2E0000000000000000 /* Sources */,
+				721103900000000000000000 /* Frameworks */,
+				2EFE38CC0000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HadithBooks";
+			productName = "HadithBooks";
+			productReference = 362052080000000000000000 /* HadithBooks.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		275709880000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 10B7C50E0000000000000000 /* Build configuration list for PBXProject "HadithBooks" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 261E10C20000000000000000;
+			productRefGroup = 30D1369C0000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B6AEAE80000000000000000 /* HadithBooks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EFE38CC0000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208723380000000000000000 /* Default-568h@2x.png in Resources */,
+				1CF6169A0000000000000000 /* bg_small.png in Resources */,
+				196509FC0000000000000000 /* hadithCover.png in Resources */,
+				15D3FD5E0000000000000000 /* HadithSourcesViewController.xib in Resources */,
+				1242F0C00000000000000000 /* BooksViewController.xib in Resources */,
+				EB1E42200000000000000000 /* NarrationViewController.xib in Resources */,
+				B20D78400000000000000000 /* hadith.db in Resources */,
+				78FCAE600000000000000000 /* cell_bg.png in Resources */,
+				3FEBE4800000000000000000 /* HadithBookCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B6D2C2E0000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27DC1F900000000000000000 /* AppDelegate.h in Sources */,
+				244B12F20000000000000000 /* AppDelegate.m in Sources */,
+				20BA06540000000000000000 /* HadithSourcesViewController.h in Sources */,
+				1D28F9B60000000000000000 /* HadithSourcesViewController.m in Sources */,
+				1997ED180000000000000000 /* BooksViewController.h in Sources */,
+				1606E07A0000000000000000 /* BooksViewController.m in Sources */,
+				1275D3DC0000000000000000 /* NarrationViewController.h in Sources */,
+				EE4C73E00000000000000000 /* NarrationViewController.m in Sources */,
+				B53BAA000000000000000000 /* HadithBookCell.h in Sources */,
+				7C2AE0200000000000000000 /* HadithBookCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		328F456A0000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = MonoTouch;
+		};
+		36C802C80000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				PRODUCT_NAME = "HadithBooks";
+				WRAPPER_EXTENSION = app;
+			};
+			name = MonoTouch;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10B7C50E0000000000000000 /* Build configuration list for PBXProject "HadithBooks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				328F456A0000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+		361157FB0000000000000000 /* Build configuration list for PBXNativeTarget "HadithBooks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36C802C80000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 275709880000000000000000 /* Project object */;
+}

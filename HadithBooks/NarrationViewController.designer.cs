@@ -13,6 +13,9 @@ namespace HadithBooks
 	partial class NarrationViewController
 	{
 		[Outlet]
+		MonoTouch.UIKit.UIButton bntLanguageMode { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UILabel lblBookName { get; set; }
 
 		[Outlet]
@@ -27,6 +30,9 @@ namespace HadithBooks
 		[Outlet]
 		MonoTouch.UIKit.UITextView txtNarrationDetails { get; set; }
 
+		[Action ("btnLanguage:")]
+		partial void btnLanguage (MonoTouch.Foundation.NSObject sender);
+
 		[Action ("GoBack:")]
 		partial void GoBack (MonoTouch.Foundation.NSObject sender);
 
@@ -38,14 +44,19 @@ namespace HadithBooks
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (lblTitle != null) {
-				lblTitle.Dispose ();
-				lblTitle = null;
+			if (bntLanguageMode != null) {
+				bntLanguageMode.Dispose ();
+				bntLanguageMode = null;
 			}
 
 			if (lblBookName != null) {
 				lblBookName.Dispose ();
 				lblBookName = null;
+			}
+
+			if (lblTitle != null) {
+				lblTitle.Dispose ();
+				lblTitle = null;
 			}
 
 			if (NextBtn != null) {

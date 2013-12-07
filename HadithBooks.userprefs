@@ -1,17 +1,25 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HadithBooks/HadithSourcesViewController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HadithBooks/BooksTable.cs">
     <Files>
-      <File FileName="HadithBooks/HadithSourceTable.cs" Line="36" Column="1" />
-      <File FileName="HadithBooks/HadithSourcesViewController.cs" Line="71" Column="16" />
-      <File FileName="HadithBooks/BooksViewController.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/BooksTable.cs" Line="35" Column="76" />
+      <File FileName="HadithBooks/HadithSourcesViewController.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/BooksTable.cs" Line="48" Column="12" />
       <File FileName="HadithBooks/NarrationViewController.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/AppDelegate.cs" Line="29" Column="57" />
+      <File FileName="HadithBooks/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/HadithSourcesViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/NarrationViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/Entitlements.plist" />
+      <File FileName="HadithBooks/Info.plist" />
+      <File FileName="HadithBooks/BooksViewController.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/Main.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/BookCell.cs" Line="16" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.HadithBooks>
+    <IPhoneTestFlightSettings_27CAd-Hoc ApiToken="60dfdda0e8d2960dc17e3bd0741bb2ee_MTQ4MjI2NDIwMTMtMTEtMzAgMTY6NDQ6MDAuMzk1MzM0" TeamToken="e6714bb6e7b64c624b7e42ecb70f4165_MzA3Mzk2MjAxMy0xMi0wMSAxNjoyNjozNC4xMzk2MzM" ReleaseNotes="First Hadith Collection Build" NotifyTeamMembers="False" ReplaceBinaries="False" DistributionLists="" UploadDSYMs="False" />
+  </MonoDevelop.Ide.ItemProperties.HadithBooks>
 </Properties>

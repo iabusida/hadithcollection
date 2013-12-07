@@ -39,6 +39,8 @@ namespace HadithBooks
 		{
 			this.DismissViewController(true, null);
 		}
+
+	
 	}
 }
 
