@@ -13,6 +13,9 @@ namespace HadithBooks
 	partial class HadithSourcesViewController
 	{
 		[Outlet]
+		MonoTouch.UIKit.UIImageView bg_image { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIView headerView { get; set; }
 
 		[Outlet]
@@ -20,6 +23,11 @@ namespace HadithBooks
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (bg_image != null) {
+				bg_image.Dispose ();
+				bg_image = null;
+			}
+
 			if (headerView != null) {
 				headerView.Dispose ();
 				headerView = null;

@@ -1,0 +1,219 @@
+THadithBooks
+v6
+r1
+cCheck dependencies
+cCompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/AppDelegate-E79B3C79881113EB.o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithSourcesViewController-BD48046828F71CCF.o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/BooksViewController-C4BCD5C37A9CDBD8.o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/NarrationViewController-57CB51F5CAE745D2.o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithBookCell-7BBDAA2B4223EAFF.o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/SDKSettings.plist
+c00000000523FA54200000000000003B5
+t1379902786
+s949
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/CoreServices/SystemVersion.plist
+c000000005297AAC500000000000001A0
+t1385671365
+s416
+
+N/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/AppDelegate.m
+c0000000052A3C6510000000000000144
+t1386464849
+s324
+
+N/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.m
+c0000000052A3FA8F000000000000020E
+t1386478223
+s526
+
+N/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/AppDelegate-E79B3C79881113EB.o
+t2
+s0
+
+N/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/BooksViewController-C4BCD5C37A9CDBD8.o
+t2
+s0
+
+N/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithBookCell-7BBDAA2B4223EAFF.o
+t2
+s0
+
+N/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithSourcesViewController-BD48046828F71CCF.o
+t2
+s0
+
+N/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/NarrationViewController-57CB51F5CAE745D2.o
+t2
+s0
+
+N/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell.m
+c0000000052A3E4220000000000000195
+t1386472482
+s405
+
+N/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController.m
+c0000000052A3E36900000000000001B3
+t1386472297
+s435
+
+N/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController.m
+c0000000052A3C9D30000000000000328
+t1386465747
+s808
+
+CBuild AST from /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/AppDelegate.m
+r0
+
+CBuild AST from /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.m
+r0
+
+CBuild AST from /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell.m
+r0
+
+CBuild AST from /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController.m
+r0
+
+CBuild AST from /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies007450133254b841^d0d057133254b841^-859"warning: no rule to process file '/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/AppDelegate.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController.h' of type sourcecode.c.h for architecture i386warning: no rule to process file '/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell.h' of type sourcecode.c.h for architecture i3865(21%IDEActivityLogMessage2@163"Warning: no rule to process file '/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/AppDelegate.h' of type sourcecode.c.h for architecture i386-408171027#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@179"Warning: no rule to process file '/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController.h' of type sourcecode.c.h for architecture i386-408171027#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@171"Warning: no rule to process file '/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.h' of type sourcecode.c.h for architecture i386-408171027#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@175"Warning: no rule to process file '/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController.h' of type sourcecode.c.h for architecture i386-408171027#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@166"Warning: no rule to process file '/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell.h' of type sourcecode.c.h for architecture i386-408171027#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#1#--18"Check dependencies36"21761050-8F25-42A7-895A-7150FBAADC36-
+
+CCompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/AppDelegate-E79B3C79881113EB.o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s408171027.347749
+e408171027.710549
+r1
+xCompileC
+xDerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/AppDelegate-E79B3C79881113EB.o
+x/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/AppDelegate.m
+d/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/AppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/AppDelegate.m247"CompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/AppDelegate-E79B3C79881113EB.o AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerbd3459133254b841^ffe6b5133254b841^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/AppDelegate.m0000000000000000^4232"CompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/AppDelegate-E79B3C79881113EB.o AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-generated-files.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-own-target-headers.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-all-target-headers.hmap -iquote /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-project-headers.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/DerivedSources/i386 -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/DerivedSources -F/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/AppDelegate-E79B3C79881113EB.d --serialize-diagnostics /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/AppDelegate-E79B3C79881113EB.dia -c /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/AppDelegate.m -o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/AppDelegate-E79B3C79881113EB.o36"57B4C8C4-EF91-40F5-B46A-228CCC247697-
+b3A5D59A4-30D1-48C2-85D3-9ED7FD90B83E
+
+CCompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/BooksViewController-C4BCD5C37A9CDBD8.o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s408171027.348274
+e408171027.707192
+r0
+xCompileC
+xDerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/BooksViewController-C4BCD5C37A9CDBD8.o
+x/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.m
+d/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.h
+o/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.m:12:13: error: property implementation must have its declaration in interface 'BooksViewController'
+o@synthesize booksTable;
+o            ^
+o1 error generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.m263"CompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/BooksViewController-C4BCD5C37A9CDBD8.o BooksViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler994859133254b841^030ab5133254b841^-248"/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.m:12:13: error: property implementation must have its declaration in interface 'BooksViewController'@synthesize booksTable;            ^1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@84"Property implementation must have its declaration in interface 'BooksViewController'-408171027#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@98"file:///Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.m0000000000000000^11#12#11#12#347#0#14"Semantic Issue--0#0#1#-19%DVTDocumentLocation4@98"file:///Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.m0000000000000000^4280"CompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/BooksViewController-C4BCD5C37A9CDBD8.o BooksViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-generated-files.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-own-target-headers.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-all-target-headers.hmap -iquote /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-project-headers.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/DerivedSources/i386 -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/DerivedSources -F/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/BooksViewController-C4BCD5C37A9CDBD8.d --serialize-diagnostics /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/BooksViewController-C4BCD5C37A9CDBD8.dia -c /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController.m -o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/BooksViewController-C4BCD5C37A9CDBD8.o36"77DD5850-41BB-41B3-B385-FA7804E9029B-
+b3A5D59A4-30D1-48C2-85D3-9ED7FD90B83E
+
+CCompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithBookCell-7BBDAA2B4223EAFF.o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s408171027.349085
+e408171027.734572
+r1
+xCompileC
+xDerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithBookCell-7BBDAA2B4223EAFF.o
+x/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell.m
+d/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell.m253"CompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithBookCell-7BBDAA2B4223EAFF.o HadithBookCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerf37159133254b841^1712bc133254b841^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell.m0000000000000000^4250"CompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithBookCell-7BBDAA2B4223EAFF.o HadithBookCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-generated-files.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-own-target-headers.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-all-target-headers.hmap -iquote /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-project-headers.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/DerivedSources/i386 -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/DerivedSources -F/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithBookCell-7BBDAA2B4223EAFF.d --serialize-diagnostics /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithBookCell-7BBDAA2B4223EAFF.dia -c /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell.m -o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithBookCell-7BBDAA2B4223EAFF.o36"62E7A130-1F4A-42E1-B0D3-EBBB86ABDF3C-
+b3A5D59A4-30D1-48C2-85D3-9ED7FD90B83E
+
+CCompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithSourcesViewController-BD48046828F71CCF.o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s408171027.347995
+e408171027.734568
+r1
+xCompileC
+xDerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithSourcesViewController-BD48046828F71CCF.o
+x/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController.m
+d/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController.m279"CompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithSourcesViewController-BD48046828F71CCF.o HadithSourcesViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler9c3459133254b841^a20dbc133254b841^---0#0#1#-19%DVTDocumentLocation2@106"file:///Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController.m0000000000000000^4328"CompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithSourcesViewController-BD48046828F71CCF.o HadithSourcesViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-generated-files.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-own-target-headers.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-all-target-headers.hmap -iquote /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-project-headers.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/DerivedSources/i386 -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/DerivedSources -F/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithSourcesViewController-BD48046828F71CCF.d --serialize-diagnostics /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithSourcesViewController-BD48046828F71CCF.dia -c /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController.m -o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/HadithSourcesViewController-BD48046828F71CCF.o36"031BF9CE-E91C-4DC5-982F-15E7C080BC70-
+b3A5D59A4-30D1-48C2-85D3-9ED7FD90B83E
+
+CCompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/NarrationViewController-57CB51F5CAE745D2.o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s408171027.348698
+e408171027.736520
+r1
+xCompileC
+xDerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/NarrationViewController-57CB51F5CAE745D2.o
+x/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController.m
+d/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController.m271"CompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/NarrationViewController-57CB51F5CAE745D2.o NarrationViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler105c59133254b841^6d8dbc133254b841^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController.m0000000000000000^4304"CompileC DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/NarrationViewController-57CB51F5CAE745D2.o NarrationViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xamarin Studio.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-generated-files.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-own-target-headers.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-all-target-headers.hmap -iquote /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/HadithBooks-project-headers.hmap -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/DerivedSources/i386 -I/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/DerivedSources -F/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator -MMD -MT dependencies -MF /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/NarrationViewController-57CB51F5CAE745D2.d --serialize-diagnostics /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/NarrationViewController-57CB51F5CAE745D2.dia -c /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController.m -o /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Intermediates/HadithBooks.build/MonoTouch-iphonesimulator/HadithBooks.build/Objects-normal/i386/NarrationViewController-57CB51F5CAE745D2.o36"2158B211-1579-4D37-ADE1-95685E4089D5-
+b3A5D59A4-30D1-48C2-85D3-9ED7FD90B83E
+
+CCompileXIB /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController_iPad.xib
+r0
+
+CCompileXIB /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/BooksViewController_iPhone.xib
+r0
+
+CCompileXIB /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell.xib
+r0
+
+CCompileXIB /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithBookCell_iPad.xib
+r0
+
+CCompileXIB /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController_iPad.xib
+r0
+
+CCompileXIB /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/HadithSourcesViewController_iPhone.xib
+r0
+
+CCompileXIB /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController_iPad.xib
+r0
+
+CCompileXIB /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/NarrationViewController_iPhone.xib
+r0
+
+CCpResource Default-568h@2x.png DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/HadithBooks.app/Default-568h@2x.png
+r0
+
+CCpResource bg_small.png DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/HadithBooks.app/bg_small.png
+r0
+
+CCpResource cell_bg.png DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/HadithBooks.app/cell_bg.png
+r0
+
+CCpResource hadith.db DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/HadithBooks.app/hadith.db
+r0
+
+CCpResource hadithCover.png DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/HadithBooks.app/hadithCover.png
+r0
+
+CCpResource hadithCover_iPad.png DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/HadithBooks.app/hadithCover_iPad.png
+r0
+
+CGenerateDSYMFile /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/HadithBooks.app.dSYM /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/HadithBooks.app/HadithBooks
+r0
+
+CLd /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/HadithBooks.app/HadithBooks normal i386
+r0
+
+CTouch /Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/Xcode/51/DerivedData/HadithBooks/Build/Products/MonoTouch-iphonesimulator/HadithBooks.app
+r0
+

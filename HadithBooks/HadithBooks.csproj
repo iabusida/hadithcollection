@@ -96,9 +96,6 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml.Serialization" />
-    <Reference Include="FlyoutNavigation">
-      <HintPath>Assets\FlyoutNavigation.dll</HintPath>
-    </Reference>
     <Reference Include="MonoTouch.Dialog-1" />
   </ItemGroup>
   <ItemGroup>
@@ -129,7 +126,6 @@
     <Compile Include="BooksViewController.designer.cs">
       <DependentUpon>BooksViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="BooksTable.cs" />
     <Compile Include="NarrationViewController.cs" />
     <Compile Include="NarrationViewController.designer.cs">
       <DependentUpon>NarrationViewController.cs</DependentUpon>

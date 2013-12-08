@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.Dialog;
-
-using FlyoutNavigation;
 using System.Drawing;
 using MonoTouch.ObjCRuntime;
 
@@ -39,7 +37,13 @@ namespace HadithBooks
 		
 			base.ViewDidLoad ();
 
+			var window = new UIWindow (UIScreen.MainScreen.Bounds);
 			sourceTable.Source = new HadithSourceTable (this);
+
+			if (window.Frame.Height == 568) {
+				bg_image.Frame = new RectangleF (0, 0, 320, 568);
+				sourceTable.Frame = new RectangleF(35,87,251,296);
+			}
 			Add (sourceTable);
 
 		}

@@ -13,6 +13,9 @@ namespace HadithBooks
 	partial class NarrationViewController
 	{
 		[Outlet]
+		MonoTouch.UIKit.UIImageView bg_image { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIButton bntLanguageMode { get; set; }
 
 		[Outlet]
@@ -23,6 +26,9 @@ namespace HadithBooks
 
 		[Outlet]
 		MonoTouch.UIKit.UILabel lblTitleArabic { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel lblTotalCount { get; set; }
 
 		[Outlet]
 		MonoTouch.UIKit.UIButton NextBtn { get; set; }
@@ -47,9 +53,14 @@ namespace HadithBooks
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (lblTitleArabic != null) {
-				lblTitleArabic.Dispose ();
-				lblTitleArabic = null;
+			if (lblTotalCount != null) {
+				lblTotalCount.Dispose ();
+				lblTotalCount = null;
+			}
+
+			if (bg_image != null) {
+				bg_image.Dispose ();
+				bg_image = null;
 			}
 
 			if (bntLanguageMode != null) {
@@ -65,6 +76,11 @@ namespace HadithBooks
 			if (lblTitle != null) {
 				lblTitle.Dispose ();
 				lblTitle = null;
+			}
+
+			if (lblTitleArabic != null) {
+				lblTitleArabic.Dispose ();
+				lblTitleArabic = null;
 			}
 
 			if (NextBtn != null) {

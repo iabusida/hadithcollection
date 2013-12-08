@@ -50,6 +50,27 @@ namespace HadithBooks
 		{
 			base.ViewDidLoad ();
 
+			var window = new UIWindow (UIScreen.MainScreen.Bounds);
+
+			if (window.Frame.Height == 568) {
+				bg_image.Frame = new RectangleF (0, 0, 320, 568);
+				NextBtn.Frame = new RectangleF(201, 484, 58, 29);
+				PreviousBtn.Frame = new RectangleF (56,485,85,28);
+				lblTotalCount.Frame = new RectangleF(175,455,100,21);
+				txtNarrationDetails.Frame = new RectangleF(28,90,257,357);
+			}
+
+			if (!UserInterfaceIdiomIsPhone) {
+
+				UIStringAttributes stringAttributes = new UIStringAttributes {
+					ParagraphStyle = new NSMutableParagraphStyle () { LineSpacing = 20.0f }
+				};
+				var AttributedText = new NSMutableAttributedString (txtNarrationDetails.Text);
+				AttributedText.AddAttributes (stringAttributes, new NSRange (0, txtNarrationDetails.Text.Length));
+				txtNarrationDetails.AttributedText = AttributedText;
+
+
+			}
 			txtNarrationDetails.Layer.BorderColor = UIColor.Gray.CGColor;
 			txtNarrationDetails.Layer.BorderWidth = 1.0f;
 			txtNarrationDetails.Layer.CornerRadius = 2;
@@ -106,6 +127,7 @@ namespace HadithBooks
 				bntLanguageMode.SetTitle ("تظهر باللغة العربية", UIControlState.Normal);
 
 			}
+			lblTotalCount.Text = String.Format ("{0}/{1}", CurrentNarration + 1, NarrationList.Count ());
 
 		}
 
@@ -120,7 +142,7 @@ namespace HadithBooks
 				//TODO add code to handle next chapter
 
 				if (CurrentBook == this.HadithBooks.Count () - 1) {
-					new UIAlertView ("End", "Reached end of chapter", null, "OK", null).Show ();
+					new UIAlertView ("End", "End of Book", null, "OK", null).Show ();
 				} else {
 
 					LoadNextBook ();

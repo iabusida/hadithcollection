@@ -13,6 +13,9 @@ namespace HadithBooks
 	partial class BooksViewController
 	{
 		[Outlet]
+		MonoTouch.UIKit.UIImageView bg_image { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UITableView booksTable { get; set; }
 
 		[Outlet]
@@ -26,14 +29,19 @@ namespace HadithBooks
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (lblBookTitleArabic != null) {
-				lblBookTitleArabic.Dispose ();
-				lblBookTitleArabic = null;
+			if (bg_image != null) {
+				bg_image.Dispose ();
+				bg_image = null;
 			}
 
 			if (booksTable != null) {
 				booksTable.Dispose ();
 				booksTable = null;
+			}
+
+			if (lblBookTitleArabic != null) {
+				lblBookTitleArabic.Dispose ();
+				lblBookTitleArabic = null;
 			}
 
 			if (lblHadithBook != null) {
