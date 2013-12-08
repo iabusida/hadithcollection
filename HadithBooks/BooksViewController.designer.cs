@@ -16,6 +16,9 @@ namespace HadithBooks
 		MonoTouch.UIKit.UITableView booksTable { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UILabel lblBookTitleArabic { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UILabel lblHadithBook { get; set; }
 
 		[Action ("GoBack:")]
@@ -23,14 +26,19 @@ namespace HadithBooks
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (lblHadithBook != null) {
-				lblHadithBook.Dispose ();
-				lblHadithBook = null;
+			if (lblBookTitleArabic != null) {
+				lblBookTitleArabic.Dispose ();
+				lblBookTitleArabic = null;
 			}
 
 			if (booksTable != null) {
 				booksTable.Dispose ();
 				booksTable = null;
+			}
+
+			if (lblHadithBook != null) {
+				lblHadithBook.Dispose ();
+				lblHadithBook = null;
 			}
 		}
 	}

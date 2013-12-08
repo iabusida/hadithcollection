@@ -13,6 +13,7 @@
 	UIButton *_bntLanguageMode;
 	UILabel *_lblBookName;
 	UILabel *_lblTitle;
+    IBOutlet UILabel *lblTitleArabic;
 	UIButton *_NextBtn;
 	UIButton *_PreviousBtn;
 	UITextView *_txtNarrationDetails;

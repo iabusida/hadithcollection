@@ -7,6 +7,7 @@ using MonoTouch.Dialog;
 
 using FlyoutNavigation;
 using System.Drawing;
+using MonoTouch.ObjCRuntime;
 
 namespace HadithBooks
 {
@@ -14,7 +15,14 @@ namespace HadithBooks
 	public partial class HadithSourcesViewController : UIViewController
 	{
 
-		public HadithSourcesViewController () : base ("HadithSourcesViewController", null)
+		static bool UserInterfaceIdiomIsPhone {
+			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
+		}
+		public HadithSourcesViewController () : base (UserInterfaceIdiomIsPhone ? "HadithSourcesViewController_iPhone" : "HadithSourcesViewController_iPad", null)
+		{
+		}
+
+		public HadithSourcesViewController (string nibName, NSBundle bundle) : base (nibName, bundle)
 		{
 		}
 
@@ -28,36 +36,12 @@ namespace HadithBooks
 
 		public override void ViewDidLoad ()
 		{
-
-//			تظهر باللغة العربية
+		
 			base.ViewDidLoad ();
 
-			int yPosition = 0;
+			sourceTable.Source = new HadithSourceTable (this);
+			Add (sourceTable);
 
-			for(int index = 0; index < HadithDataContext.Get_All_Hadith_Sources.Count(); index++) {
-
-				var hadithSource = HadithDataContext.Get_All_Hadith_Sources.ElementAt (index);
-				var sourceTitle = hadithSource.EnglishTitle.Trim () + "....." + hadithSource.ArabicTitle;
-				var buttonRect = UIButton.FromType (UIButtonType.Custom);
-
-				var sourceLabel = new UILabel(new RectangleF(0, 0, 275, 20));
-				sourceLabel.Text = sourceTitle;
-				sourceLabel.Font = UIFont.FromName("Helvetica-Bold", 11f);
-				buttonRect.Frame = new RectangleF (60, 80 + yPosition, 175, 20);
-				sourceLabel.TextColor = UIColor.White;
-				buttonRect.TouchUpInside += delegate {
-					//var alert = new UIAlertView ("Test", 
-						BooksViewController booksView = new BooksViewController(hadithSource);
-					booksView.ModalTransitionStyle = UIModalTransitionStyle.CrossDissolve;
-					this.PresentViewController (booksView, true, null);
-				};
-
-				buttonRect.AddSubview (sourceLabel);
-				this.View.AddSubview (buttonRect);
-				yPosition += 30;
-			}
-			NSUserDefaults.StandardUserDefaults.SetBool (true, "arabicmode");
-			 
 		}
 
 
@@ -87,40 +71,30 @@ namespace HadithBooks
 			public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 			{
 				BooksViewController booksView = new BooksViewController(HadithDataContext.Get_All_Hadith_Sources.ElementAt (indexPath.Row));
-				booksView.ModalTransitionStyle = UIModalTransitionStyle.FlipHorizontal;
+
+
+				//window.RootViewController = new HadithSourcesViewController ();
+				booksView.ModalTransitionStyle = UIModalTransitionStyle.CrossDissolve;
 				this.parentController.PresentViewController (booksView, true, null);
 			}
-			/// <summary>
-			/// Called by the TableView to get the actual UITableViewCell to render for the particular row
-			/// </summary>
+
 			public override UITableViewCell GetCell (UITableView tableView, MonoTouch.Foundation.NSIndexPath indexPath)
 			{
-				// request a recycled cell to save memory
-				UITableViewCell cell = tableView.DequeueReusableCell (cellIdentifier);
-				// if there are no cells to reuse, create a new one
+
+				var hadith_source = HadithDataContext.Get_All_Hadith_Sources.ElementAt (indexPath.Row);
+				var cell = tableView.DequeueReusableCell("CellID") as HadithBookCell;
+
 				if (cell == null)
-					cell = new UITableViewCell (UITableViewCellStyle.Default, cellIdentifier);
+				{
+					cell = new HadithBookCell();
 
-				Console.WriteLine ("Arabic Mode: " + NSUserDefaults.StandardUserDefaults.BoolForKey ("arabicmode"));
-				cell.TextLabel.Text = NSUserDefaults.StandardUserDefaults.BoolForKey("arabicmode") ? HadithDataContext.Get_All_Hadith_Sources.ElementAt (indexPath.Row).ArabicTitle : HadithDataContext.Get_All_Hadith_Sources.ElementAt (indexPath.Row).EnglishTitle;
-
+					var views = NSBundle.MainBundle.LoadNib("HadithBookCell", cell, null);
+					cell = Runtime.GetNSObject( views.ValueAt(0) ) as HadithBookCell;
+				}
+				cell.SelectionStyle = UITableViewCellSelectionStyle.None;
+				cell.BackgroundColor = UIColor.Clear;
+				cell.SetHadithLabels (hadith_source.EnglishTitle, hadith_source.ArabicTitle);
 				return cell;
-			}
-		}
-
-
-		class TaskPageController : DialogViewController
-		{
-			public TaskPageController (FlyoutNavigationController navigation, string title) : base (null)
-			{
-				Root = new RootElement (title) {
-					new Section {
-						new CheckboxElement (title)
-					}
-				};
-				NavigationItem.LeftBarButtonItem = new UIBarButtonItem (UIBarButtonSystemItem.Action, delegate {
-					navigation.ToggleMenu ();
-				});
 			}
 		}
 
@@ -129,58 +103,3 @@ namespace HadithBooks
 
 }
 
-/*
-public class MainController : UIViewController
-{
-	FlyoutNavigationController navigation;
-
-	// Data we'll use to create our flyout menu and views:
-	string[] Tasks = {
-		"Get Xamarin",
-		"Learn C#",
-		"Write Killer App",
-		"Add Platforms",
-		"Profit",
-		"Meet Obama",
-	};
-
-	public override void ViewDidLoad ()
-	{
-		base.ViewDidLoad ();
-
-		// Create the flyout view controller, make it large,
-		// and add it as a subview:
-		navigation = new FlyoutNavigationController ();
-		navigation.View.Frame = UIScreen.MainScreen.Bounds;
-		View.AddSubview (navigation.View);
-
-		// Create the menu:
-		navigation.NavigationRoot = new RootElement ("Task List") {
-			new Section ("Task List") {
-				from page in Tasks
-				select new StringElement (page) as Element
-			}
-		};
-
-		// Create an array of UINavigationControllers that correspond to your
-		// menu items:
-		navigation.ViewControllers = Array.ConvertAll (Tasks, title =>
-			new UINavigationController (new TaskPageController (navigation, title))
-		);
-	}
-
-	class TaskPageController : DialogViewController
-	{
-		public TaskPageController (FlyoutNavigationController navigation, string title) : base (null)
-		{
-			Root = new RootElement (title) {
-				new Section {
-					new CheckboxElement (title)
-				}
-			};
-			NavigationItem.LeftBarButtonItem = new UIBarButtonItem (UIBarButtonSystemItem.Action, delegate {
-				navigation.ToggleMenu ();
-			});
-		}
-	}
-}*/

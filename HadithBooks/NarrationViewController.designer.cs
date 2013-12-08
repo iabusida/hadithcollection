@@ -22,6 +22,9 @@ namespace HadithBooks
 		MonoTouch.UIKit.UILabel lblTitle { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UILabel lblTitleArabic { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIButton NextBtn { get; set; }
 
 		[Outlet]
@@ -44,6 +47,11 @@ namespace HadithBooks
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (lblTitleArabic != null) {
+				lblTitleArabic.Dispose ();
+				lblTitleArabic = null;
+			}
+
 			if (bntLanguageMode != null) {
 				bntLanguageMode.Dispose ();
 				bntLanguageMode = null;

@@ -15,12 +15,15 @@ namespace HadithBooks
 		private int CurrentBook;
 		private int CurrentNarration = 0;
 		private string show_in_arabic_key = "show_in_arabic_narration";
-		public NarrationViewController () : base ("NarrationViewController", null)
-		{
 
+		static bool UserInterfaceIdiomIsPhone {
+			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
+		}
+		public NarrationViewController () : base (UserInterfaceIdiomIsPhone ? "NarrationViewController_iPhone" : "NarrationViewController_iPad", null)
+		{
 		}
 
-		public NarrationViewController (List<Book> books, int selectedBook)
+		public NarrationViewController (List<Book> books, int selectedBook) : base (UserInterfaceIdiomIsPhone ? "NarrationViewController_iPhone" : "NarrationViewController_iPad", null)
 		{
 
 			this.HadithBooks = books;
@@ -28,12 +31,6 @@ namespace HadithBooks
 			CurrentBook = selectedBook;
 
 			NarrationList = HadithDataContext.GetNarrationsByBookId (this.HadithBooks [selectedBook].BookNumber);
-//			for (int i = 0; i <  (); i++) {
-				//this.HadithBook.Chapters[i].Narrations = HadithDataContext.GetNarrationsByChapterId (this.HadithBook.Chapters[i].ChapterId);
-
-
-//NarrationList.AddRange (HadithDataContext.GetNarrationsByBookId(this.HadithBooks [selectedBook].Chapters [i].ChapterId));
-//			}
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -78,21 +75,6 @@ namespace HadithBooks
 				CurrentNarration -= 1;
 				updateScreen();
 			}
-//				 else {
-//				//TODO add code to handle next chapter
-//
-//				if(CurrentBook == this.HadithBooks.Count())
-//				{
-//					new UIAlertView ("End", "Reached end of chapter", null, null, null).Show ();
-//				}
-//				else
-//				{
-//					LoadNextBook();
-//				}
-//
-//
-//			}
-
 		}
 
 		partial void btnLanguage (MonoTouch.Foundation.NSObject sender)

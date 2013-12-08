@@ -28,4 +28,8 @@
 - (IBAction)NextNarration:(id)sender {
 }
 
+- (void)dealloc {
+    [lblTitleArabic release];
+    [super dealloc];
+}
 @end

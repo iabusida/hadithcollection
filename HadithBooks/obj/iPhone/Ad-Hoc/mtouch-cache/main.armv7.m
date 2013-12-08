@@ -10,8 +10,6 @@ extern void *mono_aot_module_System_Data_info;
 extern void *mono_aot_module_System_Transactions_info;
 extern void *mono_aot_module_System_ComponentModel_DataAnnotations_info;
 extern void *mono_aot_module_Mono_Data_Sqlite_info;
-extern void *mono_aot_module_FlyoutNavigation_info;
-extern void *mono_aot_module_MonoTouch_Dialog_1_info;
 
 void monotouch_register_modules ()
 {
@@ -25,16 +23,12 @@ void monotouch_register_modules ()
 	mono_aot_register_module (mono_aot_module_System_Transactions_info);
 	mono_aot_register_module (mono_aot_module_System_ComponentModel_DataAnnotations_info);
 	mono_aot_register_module (mono_aot_module_Mono_Data_Sqlite_info);
-	mono_aot_register_module (mono_aot_module_FlyoutNavigation_info);
-	mono_aot_register_module (mono_aot_module_MonoTouch_Dialog_1_info);
 
 }
 
 void monotouch_register_assemblies ()
 {
 	monotouch_open_and_register ("monotouch.dll");
-	monotouch_open_and_register ("FlyoutNavigation.dll");
-	monotouch_open_and_register ("MonoTouch.Dialog-1.dll");
 
 }
 

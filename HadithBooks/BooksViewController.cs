@@ -10,10 +10,15 @@ namespace HadithBooks
 
 
 		private HadithSource hadithSource = null;
-		public BooksViewController () : base ("BooksViewController", null)
-		{
 
+				static bool UserInterfaceIdiomIsPhone {
+			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
 		}
+		public BooksViewController () : base (UserInterfaceIdiomIsPhone ? "BooksViewController_iPhone" : "BooksViewController_iPad", null)
+		{
+		}
+
+
 		public BooksViewController(HadithSource hadithSource)
 		{
 			this.hadithSource = hadithSource;
@@ -33,6 +38,7 @@ namespace HadithBooks
 			booksTable.Source = new BooksTable(this, hadithSource.Books);
 			Add (booksTable);
 			lblHadithBook.Text = hadithSource.EnglishTitle;
+			lblBookTitleArabic.Text = hadithSource.ArabicTitle;
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 		partial void GoBack (MonoTouch.Foundation.NSObject sender)

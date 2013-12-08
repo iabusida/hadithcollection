@@ -1,25 +1,43 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HadithBooks/BooksTable.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPad.7.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HadithBooks/HadithSourcesViewController.cs">
     <Files>
-      <File FileName="HadithBooks/HadithSourcesViewController.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/BooksTable.cs" Line="48" Column="12" />
+      <File FileName="HadithBooks/HadithSourcesViewController.cs" Line="18" Column="149" />
+      <File FileName="HadithBooks/BooksTable.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/NarrationViewController.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/AppDelegate.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/HadithSourcesViewController.designer.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/NarrationViewController.designer.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/Entitlements.plist" />
       <File FileName="HadithBooks/Info.plist" />
-      <File FileName="HadithBooks/BooksViewController.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/BooksViewController.cs" Line="17" Column="3" />
       <File FileName="HadithBooks/Main.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/BookCell.cs" Line="16" Column="4" />
+      <File FileName="HadithBooks/BookCell.designer.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/BookCell.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/HadithBookCell.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/HadithBookCell.designer.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/Model/HadithSource.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/BooksViewController.designer.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="HadithBooks" expanded="True">
+            <Node name="Resources" expanded="True" />
+            <Node name="BooksViewController.cs" expanded="True" />
+            <Node name="HadithSourcesViewController.cs" expanded="True" />
+            <Node name="HadithSourcesViewController_iPhone.xib" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.HadithBooks>
-    <IPhoneTestFlightSettings_27CAd-Hoc ApiToken="60dfdda0e8d2960dc17e3bd0741bb2ee_MTQ4MjI2NDIwMTMtMTEtMzAgMTY6NDQ6MDAuMzk1MzM0" TeamToken="e6714bb6e7b64c624b7e42ecb70f4165_MzA3Mzk2MjAxMy0xMi0wMSAxNjoyNjozNC4xMzk2MzM" ReleaseNotes="First Hadith Collection Build" NotifyTeamMembers="False" ReplaceBinaries="False" DistributionLists="" UploadDSYMs="False" />
+    <IPhoneTestFlightSettings_27CAd-Hoc ApiToken="60dfdda0e8d2960dc17e3bd0741bb2ee_MTQ4MjI2NDIwMTMtMTEtMzAgMTY6NDQ6MDAuMzk1MzM0" TeamToken="e6714bb6e7b64c624b7e42ecb70f4165_MzA3Mzk2MjAxMy0xMi0wMSAxNjoyNjozNC4xMzk2MzM" ReleaseNotes="UI updates to viewing Hadith Books" NotifyTeamMembers="False" ReplaceBinaries="True" DistributionLists="" UploadDSYMs="False" />
+    <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="FR56E67CGU" TeamId="P9666P87BB" />
   </MonoDevelop.Ide.ItemProperties.HadithBooks>
 </Properties>

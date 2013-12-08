@@ -8,6 +8,3 @@ Mono.Security.dll
 System.Transactions.dll
 System.ComponentModel.DataAnnotations.dll
 Mono.Data.Sqlite.dll
-FlyoutNavigation.dll
-MonoTouch.Dialog-1.dll
-System.Json.dll

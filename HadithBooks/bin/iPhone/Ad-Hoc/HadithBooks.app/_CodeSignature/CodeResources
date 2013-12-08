@@ -6,31 +6,27 @@
 	<dict>
 		<key>BooksViewController.nib</key>
 		<data>
-		D3+g/ku2uNjLZDyHAaowb7v7ifw=
+		YQONoHTCbxFKAx74CUWrqpItXOU=
 		</data>
 		<key>Default-568h@2x.png</key>
 		<data>
 		h4KgJgWpxdjfyoXM+WlZS2uDdqs=
 		</data>
-		<key>FlyoutNavigation.dll</key>
+		<key>HadithBookCell.nib</key>
 		<data>
-		S87nilK3QkvG4g3IBwABs6o4P1o=
+		expXHwDSJBRWnY9lJzWG/VUgmwU=
 		</data>
 		<key>HadithBooks.exe</key>
 		<data>
-		liTluBbjiABfvDpKg1bBU+aVFrY=
+		rzzthNQ0tCWTalRpJ4YCoY3XctE=
 		</data>
 		<key>HadithSourcesViewController.nib</key>
 		<data>
-		+GBULfXrMyWg90o3GKX8JGRB2PU=
+		XNN37tGqam3bkw2WLDcmN61UcWU=
 		</data>
 		<key>Mono.Data.Sqlite.dll</key>
 		<data>
-		MN20JOMaKe39YHy7fdNkDImou78=
-		</data>
-		<key>MonoTouch.Dialog-1.dll</key>
-		<data>
-		JpvBp+7EnXLmTDUtYyBMSURspt0=
+		xqajK5LtAJ3925kDDL6DKs+0auo=
 		</data>
 		<key>NOTICE</key>
 		<data>
@@ -38,7 +34,7 @@
 		</data>
 		<key>NarrationViewController.nib</key>
 		<data>
-		xTjGrblbjbLpzxGHn+DFOPoqvCs=
+		TN0oPecYCpjx19RSUmWtE8H8JVs=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -46,31 +42,35 @@
 		</data>
 		<key>System.ComponentModel.DataAnnotations.dll</key>
 		<data>
-		VIMO/93mx/8Aos0Y++b37SZ+tPU=
+		ao50alLl3RDOlE49wcmPgNvV0l4=
 		</data>
 		<key>System.Core.dll</key>
 		<data>
-		vCh0Ysnr7SiEs3knisjkrQw4krU=
+		ZSFTpfIR+EgcfSBMfmlVjWfBuxk=
 		</data>
 		<key>System.Data.dll</key>
 		<data>
-		8IYI/Nil3DTV31o7VjKCCRna79Q=
+		F9L1d40VEzZ587EF/I5Imwg0ox4=
 		</data>
 		<key>System.Transactions.dll</key>
 		<data>
-		BMIUJ9R1i3X6XBmf7dNBvIwKfcY=
+		vIQWGrm00sLoxqrB1ZcGJNE5nDA=
 		</data>
 		<key>System.Xml.dll</key>
 		<data>
-		7wJ9fZ/1kcCyr9jb4uPjSXlnUew=
+		SD1l0qOfIcqueidJ2Z529XgsVtY=
 		</data>
 		<key>System.dll</key>
 		<data>
-		HF93v4wrYx8JMPiM3XpYaAchRQY=
+		iVPNW67ryv9ZCAsueZFYhyiAGS0=
 		</data>
 		<key>bg_small.png</key>
 		<data>
 		PJBG8KQBljNmA/Q3crrW8N2xcd8=
+		</data>
+		<key>cell_bg.png</key>
+		<data>
+		dOIZqsUw7A1NqY4Nr4i2Gr3j7+w=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>hadith.db</key>
 		<data>
-		kkS7e9bZKcnwXAY8qRP0zfCJB3Q=
+		yPJYUBc4vUMXvp3whn0x1Co/iWw=
 		</data>
 		<key>hadithCover.png</key>
 		<data>
@@ -86,42 +86,38 @@
 		</data>
 		<key>monotouch.dll</key>
 		<data>
-		dvznHbefZANzf5jyNr71b2WizzU=
+		oQyv+sJ+DsepWtLkcZsVILchhAY=
 		</data>
 		<key>mscorlib.dll</key>
 		<data>
-		UclD45p3qXnapL1XuZTwbwc2LCg=
+		L3jY0SLFECK3VnZ0ynSYhqSWn7o=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>BooksViewController.nib</key>
 		<data>
-		D3+g/ku2uNjLZDyHAaowb7v7ifw=
+		YQONoHTCbxFKAx74CUWrqpItXOU=
 		</data>
 		<key>Default-568h@2x.png</key>
 		<data>
 		h4KgJgWpxdjfyoXM+WlZS2uDdqs=
 		</data>
-		<key>FlyoutNavigation.dll</key>
+		<key>HadithBookCell.nib</key>
 		<data>
-		S87nilK3QkvG4g3IBwABs6o4P1o=
+		expXHwDSJBRWnY9lJzWG/VUgmwU=
 		</data>
 		<key>HadithBooks.exe</key>
 		<data>
-		liTluBbjiABfvDpKg1bBU+aVFrY=
+		rzzthNQ0tCWTalRpJ4YCoY3XctE=
 		</data>
 		<key>HadithSourcesViewController.nib</key>
 		<data>
-		+GBULfXrMyWg90o3GKX8JGRB2PU=
+		XNN37tGqam3bkw2WLDcmN61UcWU=
 		</data>
 		<key>Mono.Data.Sqlite.dll</key>
 		<data>
-		MN20JOMaKe39YHy7fdNkDImou78=
-		</data>
-		<key>MonoTouch.Dialog-1.dll</key>
-		<data>
-		JpvBp+7EnXLmTDUtYyBMSURspt0=
+		xqajK5LtAJ3925kDDL6DKs+0auo=
 		</data>
 		<key>NOTICE</key>
 		<data>
@@ -129,7 +125,7 @@
 		</data>
 		<key>NarrationViewController.nib</key>
 		<data>
-		xTjGrblbjbLpzxGHn+DFOPoqvCs=
+		TN0oPecYCpjx19RSUmWtE8H8JVs=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -137,31 +133,35 @@
 		</data>
 		<key>System.ComponentModel.DataAnnotations.dll</key>
 		<data>
-		VIMO/93mx/8Aos0Y++b37SZ+tPU=
+		ao50alLl3RDOlE49wcmPgNvV0l4=
 		</data>
 		<key>System.Core.dll</key>
 		<data>
-		vCh0Ysnr7SiEs3knisjkrQw4krU=
+		ZSFTpfIR+EgcfSBMfmlVjWfBuxk=
 		</data>
 		<key>System.Data.dll</key>
 		<data>
-		8IYI/Nil3DTV31o7VjKCCRna79Q=
+		F9L1d40VEzZ587EF/I5Imwg0ox4=
 		</data>
 		<key>System.Transactions.dll</key>
 		<data>
-		BMIUJ9R1i3X6XBmf7dNBvIwKfcY=
+		vIQWGrm00sLoxqrB1ZcGJNE5nDA=
 		</data>
 		<key>System.Xml.dll</key>
 		<data>
-		7wJ9fZ/1kcCyr9jb4uPjSXlnUew=
+		SD1l0qOfIcqueidJ2Z529XgsVtY=
 		</data>
 		<key>System.dll</key>
 		<data>
-		HF93v4wrYx8JMPiM3XpYaAchRQY=
+		iVPNW67ryv9ZCAsueZFYhyiAGS0=
 		</data>
 		<key>bg_small.png</key>
 		<data>
 		PJBG8KQBljNmA/Q3crrW8N2xcd8=
+		</data>
+		<key>cell_bg.png</key>
+		<data>
+		dOIZqsUw7A1NqY4Nr4i2Gr3j7+w=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -169,7 +169,7 @@
 		</data>
 		<key>hadith.db</key>
 		<data>
-		kkS7e9bZKcnwXAY8qRP0zfCJB3Q=
+		yPJYUBc4vUMXvp3whn0x1Co/iWw=
 		</data>
 		<key>hadithCover.png</key>
 		<data>
@@ -177,11 +177,11 @@
 		</data>
 		<key>monotouch.dll</key>
 		<data>
-		dvznHbefZANzf5jyNr71b2WizzU=
+		oQyv+sJ+DsepWtLkcZsVILchhAY=
 		</data>
 		<key>mscorlib.dll</key>
 		<data>
-		UclD45p3qXnapL1XuZTwbwc2LCg=
+		L3jY0SLFECK3VnZ0ynSYhqSWn7o=
 		</data>
 	</dict>
 	<key>rules</key>

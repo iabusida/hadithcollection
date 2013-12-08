@@ -7,8 +7,14 @@ namespace HadithBooks
 {
 	public partial class HadithBookCell : UITableViewCell
 	{
-		public static readonly UINib Nib = UINib.FromName ("HadithBookCell", NSBundle.MainBundle);
+
+		static bool UserInterfaceIdiomIsPhone {
+			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
+		}
+
+		public static readonly UINib Nib = UINib.FromName ( UserInterfaceIdiomIsPhone ? "HadithBookCell" : "HadithBookCell_iPad", NSBundle.MainBundle);
 		public static readonly NSString Key = new NSString ("HadithBookCell");
+
 
 		public HadithBookCell () : base ()
 		{
@@ -23,6 +29,8 @@ namespace HadithBooks
 		}
 		public void SetHadithLabels(string english, string arabic)
 		{
+			lblArabic.TextColor = UIColor.White;
+			lblEnglish.TextColor = UIColor.White;
 			lblEnglish.Text = english;
 			lblArabic.Text = arabic;
 		}
