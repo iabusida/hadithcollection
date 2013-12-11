@@ -34,8 +34,6 @@ namespace HadithBooks
 						source.SourceId = reader.GetInt32 (0);
 						source.ArabicTitle = reader.GetString (1);
 						source.EnglishTitle = reader.GetString (2);
-						source.Books = GetBooksBySourceId (source.SourceId);
-
 						sources.Add (source);
 					}
 					reader.Close ();
@@ -49,13 +47,15 @@ namespace HadithBooks
 
 		}
 
-		private static List<Book> GetBooksBySourceId (int sourceId)
+		public static List<Book> GetBooksBySourceId (int sourceId)
 		{
 			List<Book> Booklist = new List<Book> ();
-			IDbCommand dbcmd2 = dbcon.CreateCommand ();
-			dbcmd2.CommandText = "SELECT * from books where HadithSource_SourceId = " + sourceId;
 
-			IDataReader reader = dbcmd2.ExecuteReader ();
+			dbcon.Open ();
+			IDbCommand dbcmd = dbcon.CreateCommand ();
+			dbcmd.CommandText = "SELECT * from books where HadithSource_SourceId = " + sourceId;
+
+			IDataReader reader = dbcmd.ExecuteReader ();
 			while (reader.Read ()) {
 				try {
 
@@ -72,28 +72,12 @@ namespace HadithBooks
 					Console.WriteLine (ex.Message);
 				}
 			}
+			reader.Close ();
+			dbcmd.Dispose ();
+			dbcon.Close ();
 			return Booklist;
 		}
-		//		private static List<Chapter> GetChaptersByBookId (int bookId)
-		//		{
-		//			List<Chapter> chapterList = new List<Chapter> ();
-		//			IDbCommand dbcmd2 = dbcon.CreateCommand ();
-		//			dbcmd2.CommandText = "SELECT * from chapters where Book_BookId = " + bookId;
-		//
-		//			IDataReader reader = dbcmd2.ExecuteReader ();
-		//			while (reader.Read ()) {
-		//				Chapter chapter = new Chapter ();
-		//				chapter.ChapterId = reader.GetInt32 (0);
-		//				chapter.TitleEnglish = reader.GetString (1);
-		//				chapter.TitleArabic = reader.GetString (2);
-		//				chapter.Number = reader.GetInt32 (3);
-		//				chapter.BookId = reader.GetInt32 (4);
-		//				//	chapter.NarrationCount = GetTotalNarrationsByChapterId (chapter.ChapterId);
-		//				//chapter.Narrations = GetNarrationsByChapterId (chapter.ChapterId);
-		//				chapterList.Add (chapter);
-		//			}
-		//			return chapterList;
-		//		}
+	
 		public static List<Narration> GetNarrationsByBookId (int chapterId)
 		{
 

@@ -1,0 +1,10 @@
+/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/iPhone/Debug/mtouch-cache/Link/System.ComponentModel.DataAnnotations.dll
+/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/iPhone/Debug/mtouch-cache/Link/monotouch.dll
+/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/iPhone/Debug/mtouch-cache/Link/System.dll
+/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/iPhone/Debug/mtouch-cache/Link/Mono.Data.Sqlite.dll
+/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/iPhone/Debug/mtouch-cache/Link/mscorlib.dll
+/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/iPhone/Debug/mtouch-cache/Link/System.Transactions.dll
+/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/iPhone/Debug/mtouch-cache/Link/System.Xml.dll
+/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/iPhone/Debug/mtouch-cache/Link/System.Core.dll
+/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/iPhone/Debug/mtouch-cache/Link/HadithBooks.exe
+/Users/islam/Development/Xamarin/HadithBooks/HadithBooks/obj/iPhone/Debug/mtouch-cache/Link/System.Data.dll

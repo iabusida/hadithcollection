@@ -51,7 +51,7 @@ native_to_managed_trampoline_MonoTouch_Foundation_NSObject_NSObject_Disposer_Dra
 
 static MonoMethod *method_3 = NULL;
 void *
-native_to_managed_trampoline_MonoTouch_UIKit_UITableViewSource__ctor (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_AppDelegate__ctor (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -76,7 +76,41 @@ native_to_managed_trampoline_MonoTouch_UIKit_UITableViewSource__ctor (id this, S
 
 static MonoMethod *method_4 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_AppDelegate__ctor (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_AppDelegate_FinishedLaunching (id this, SEL sel, id p0, id p1)
+{
+	void *arg_ptrs [2];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_4)
+		method_4 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_4)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_4, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_4, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	void* retval = (void *) mono_runtime_invoke (method_4, mthis, arg_ptrs, NULL);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
+	return res;
+}
+
+static MonoMethod *method_5 = NULL;
+void *
+native_to_managed_trampoline_MonoTouch_UIKit_UITableViewSource__ctor (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -84,13 +118,13 @@ native_to_managed_trampoline_HadithBooks_AppDelegate__ctor (id this, SEL sel)
 		mono_jit_thread_attach (NULL);
 	if (monotouch_try_get_nsobject (this))
 		return this;
-	if (!method_4)
-		method_4 = get_method_for_selector ([this class], sel).method->method;
+	if (!method_5)
+		method_5 = get_method_for_selector ([this class], sel).method->method;
 	int handle = (int) this;
 	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_4));
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_5));
 	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
-	mono_runtime_invoke (method_4, mthis, arg_ptrs, NULL);
+	mono_runtime_invoke (method_5, mthis, arg_ptrs, NULL);
 	monotouch_create_managed_ref (this, mthis, true);
 	void *params[2];
 	params[0] = mthis;
@@ -99,45 +133,11 @@ native_to_managed_trampoline_HadithBooks_AppDelegate__ctor (id this, SEL sel)
 	return this;
 }
 
-static MonoMethod *method_5 = NULL;
-void *
-native_to_managed_trampoline_HadithBooks_AppDelegate_FinishedLaunching (id this, SEL sel, id p0, id p1)
-{
-	void *arg_ptrs [2];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_5)
-		method_5 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_5)));
-		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		bool created0 = false;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_5, 0), &created0);
-		}
-		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		bool created1 = false;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_5, 1), &created1);
-		}
-		arg_ptrs [1] = mobj1;
-	void* retval = (void *) mono_runtime_invoke (method_5, mthis, arg_ptrs, NULL);
-	void * res;
-	res = *(void * *) mono_object_unbox (retval);
-	return res;
-}
-
 static MonoMethod *method_6 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_BooksTable_RowsInSection (id this, SEL sel, id p0, int p1)
+native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_get_bg_image (id this, SEL sel)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -147,25 +147,25 @@ native_to_managed_trampoline_HadithBooks_BooksTable_RowsInSection (id this, SEL 
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_6)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		bool created0 = false;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_6, 0), &created0);
-		}
-		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
 	void* retval = (void *) mono_runtime_invoke (method_6, mthis, arg_ptrs, NULL);
 	void * res;
-	res = *(void * *) mono_object_unbox (retval);
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
 	return res;
 }
 
 static MonoMethod *method_7 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_BooksTable_RowSelected (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_set_bg_image (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -182,22 +182,15 @@ native_to_managed_trampoline_HadithBooks_BooksTable_RowSelected (id this, SEL se
 			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_7, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		bool created1 = false;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_7, 1), &created1);
-		}
-		arg_ptrs [1] = mobj1;
 	mono_runtime_invoke (method_7, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_8 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_BooksTable_GetCell (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_get_headerView (id this, SEL sel)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -207,20 +200,6 @@ native_to_managed_trampoline_HadithBooks_BooksTable_GetCell (id this, SEL sel, i
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_8)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		bool created0 = false;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_8, 0), &created0);
-		}
-		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		bool created1 = false;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_8, 1), &created1);
-		}
-		arg_ptrs [1] = mobj1;
 	void* retval = (void *) mono_runtime_invoke (method_8, mthis, arg_ptrs, NULL);
 	void * res;
 	if (!retval) {
@@ -237,9 +216,9 @@ native_to_managed_trampoline_HadithBooks_BooksTable_GetCell (id this, SEL sel, i
 
 static MonoMethod *method_9 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_BooksViewController_get_booksTable (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_set_headerView (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -249,25 +228,22 @@ native_to_managed_trampoline_HadithBooks_BooksViewController_get_booksTable (id 
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_9)));
 		}
-	void* retval = (void *) mono_runtime_invoke (method_9, mthis, arg_ptrs, NULL);
-	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
-	}
-	return res;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_9, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	mono_runtime_invoke (method_9, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_10 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_BooksViewController_set_booksTable (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_get_sourceTable (id this, SEL sel)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -277,32 +253,7 @@ native_to_managed_trampoline_HadithBooks_BooksViewController_set_booksTable (id 
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_10)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		bool created0 = false;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_10, 0), &created0);
-		}
-		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_10, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_11 = NULL;
-void *
-native_to_managed_trampoline_HadithBooks_BooksViewController_get_lblBookTitleArabic (id this, SEL sel)
-{
-	void *arg_ptrs [0];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_11)
-		method_11 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_11)));
-		}
-	void* retval = (void *) mono_runtime_invoke (method_11, mthis, arg_ptrs, NULL);
+	void* retval = (void *) mono_runtime_invoke (method_10, mthis, arg_ptrs, NULL);
 	void * res;
 	if (!retval) {
 		res = NULL;
@@ -316,34 +267,59 @@ native_to_managed_trampoline_HadithBooks_BooksViewController_get_lblBookTitleAra
 	return res;
 }
 
-static MonoMethod *method_12 = NULL;
+static MonoMethod *method_11 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_BooksViewController_set_lblBookTitleArabic (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_set_sourceTable (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
-	if (!method_12)
-		method_12 = get_method_for_selector ([this class], sel).method->method;
+	if (!method_11)
+		method_11 = get_method_for_selector ([this class], sel).method->method;
 		mthis = NULL;
 		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_12)));
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_11)));
 		}
 	NSObject *nsobj0 = (NSObject *) p0;
 		MonoObject *mobj0 = NULL;
 		bool created0 = false;
 		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_12, 0), &created0);
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_11, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_12, mthis, arg_ptrs, NULL);
+	mono_runtime_invoke (method_11, mthis, arg_ptrs, NULL);
 	return NULL;
+}
+
+static MonoMethod *method_12 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_HadithSourcesViewController__ctor (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (monotouch_try_get_nsobject (this))
+		return this;
+	if (!method_12)
+		method_12 = get_method_for_selector ([this class], sel).method->method;
+	int handle = (int) this;
+	handle |= 1;
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_12));
+	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
+	mono_runtime_invoke (method_12, mthis, arg_ptrs, NULL);
+	monotouch_create_managed_ref (this, mthis, true);
+	void *params[2];
+	params[0] = mthis;
+	params[1] = &this;
+	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
+	return this;
 }
 
 static MonoMethod *method_13 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_BooksViewController_get_lblHadithBook (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_DidReceiveMemoryWarning (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -355,7 +331,117 @@ native_to_managed_trampoline_HadithBooks_BooksViewController_get_lblHadithBook (
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_13)));
 		}
-	void* retval = (void *) mono_runtime_invoke (method_13, mthis, arg_ptrs, NULL);
+	mono_runtime_invoke (method_13, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_14 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_ViewDidLoad (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_14)
+		method_14 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_14)));
+		}
+	mono_runtime_invoke (method_14, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_15 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_BooksViewController_BooksTable_RowsInSection (id this, SEL sel, id p0, int p1)
+{
+	void *arg_ptrs [2];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_15)
+		method_15 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_15)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_15, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	arg_ptrs [1] = &p1;
+	void* retval = (void *) mono_runtime_invoke (method_15, mthis, arg_ptrs, NULL);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
+	return res;
+}
+
+static MonoMethod *method_16 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_BooksViewController_BooksTable_RowSelected (id this, SEL sel, id p0, id p1)
+{
+	void *arg_ptrs [2];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_16)
+		method_16 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_16)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_16, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_16, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	mono_runtime_invoke (method_16, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_17 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_BooksViewController_BooksTable_GetCell (id this, SEL sel, id p0, id p1)
+{
+	void *arg_ptrs [2];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_17)
+		method_17 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_17)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_17, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_17, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	void* retval = (void *) mono_runtime_invoke (method_17, mthis, arg_ptrs, NULL);
 	void * res;
 	if (!retval) {
 		res = NULL;
@@ -369,97 +455,11 @@ native_to_managed_trampoline_HadithBooks_BooksViewController_get_lblHadithBook (
 	return res;
 }
 
-static MonoMethod *method_14 = NULL;
-void *
-native_to_managed_trampoline_HadithBooks_BooksViewController_set_lblHadithBook (id this, SEL sel, id p0)
-{
-	void *arg_ptrs [1];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_14)
-		method_14 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_14)));
-		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		bool created0 = false;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_14, 0), &created0);
-		}
-		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_14, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_15 = NULL;
-void *
-native_to_managed_trampoline_HadithBooks_BooksViewController__ctor (id this, SEL sel)
-{
-	void *arg_ptrs [0];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (monotouch_try_get_nsobject (this))
-		return this;
-	if (!method_15)
-		method_15 = get_method_for_selector ([this class], sel).method->method;
-	int handle = (int) this;
-	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_15));
-	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
-	mono_runtime_invoke (method_15, mthis, arg_ptrs, NULL);
-	monotouch_create_managed_ref (this, mthis, true);
-	void *params[2];
-	params[0] = mthis;
-	params[1] = &this;
-	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
-	return this;
-}
-
-static MonoMethod *method_16 = NULL;
-void *
-native_to_managed_trampoline_HadithBooks_BooksViewController_DidReceiveMemoryWarning (id this, SEL sel)
-{
-	void *arg_ptrs [0];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_16)
-		method_16 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_16)));
-		}
-	mono_runtime_invoke (method_16, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
-static MonoMethod *method_17 = NULL;
-void *
-native_to_managed_trampoline_HadithBooks_BooksViewController_ViewDidLoad (id this, SEL sel)
-{
-	void *arg_ptrs [0];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	if (!method_17)
-		method_17 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_17)));
-		}
-	mono_runtime_invoke (method_17, mthis, arg_ptrs, NULL);
-	return NULL;
-}
-
 static MonoMethod *method_18 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_BooksViewController_GoBack (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_HadithSourceTable_RowsInSection (id this, SEL sel, id p0, int p1)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -476,15 +476,18 @@ native_to_managed_trampoline_HadithBooks_BooksViewController_GoBack (id this, SE
 			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_18, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_18, mthis, arg_ptrs, NULL);
-	return NULL;
+	arg_ptrs [1] = &p1;
+	void* retval = (void *) mono_runtime_invoke (method_18, mthis, arg_ptrs, NULL);
+	void * res;
+	res = *(void * *) mono_object_unbox (retval);
+	return res;
 }
 
 static MonoMethod *method_19 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_get_headerView (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_HadithSourceTable_RowSelected (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -494,25 +497,29 @@ native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_get_headerV
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_19)));
 		}
-	void* retval = (void *) mono_runtime_invoke (method_19, mthis, arg_ptrs, NULL);
-	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
-	}
-	return res;
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_19, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_19, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	mono_runtime_invoke (method_19, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_20 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_set_headerView (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_HadithSourceTable_GetCell (id this, SEL sel, id p0, id p1)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [2];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -529,13 +536,30 @@ native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_set_headerV
 			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_20, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_20, mthis, arg_ptrs, NULL);
-	return NULL;
+	NSObject *nsobj1 = (NSObject *) p1;
+		MonoObject *mobj1 = NULL;
+		bool created1 = false;
+		if (nsobj1) {
+			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_20, 1), &created1);
+		}
+		arg_ptrs [1] = mobj1;
+	void* retval = (void *) mono_runtime_invoke (method_20, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
 }
 
 static MonoMethod *method_21 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_get_sourceTable (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_get_bg_image (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -563,7 +587,7 @@ native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_get_sourceT
 
 static MonoMethod *method_22 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_set_sourceTable (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_set_bg_image (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -588,34 +612,37 @@ native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_set_sourceT
 
 static MonoMethod *method_23 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithSourcesViewController__ctor (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_get_bntLanguageMode (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
-	if (monotouch_try_get_nsobject (this))
-		return this;
 	if (!method_23)
 		method_23 = get_method_for_selector ([this class], sel).method->method;
-	int handle = (int) this;
-	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_23));
-	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
-	mono_runtime_invoke (method_23, mthis, arg_ptrs, NULL);
-	monotouch_create_managed_ref (this, mthis, true);
-	void *params[2];
-	params[0] = mthis;
-	params[1] = &this;
-	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
-	return this;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_23)));
+		}
+	void* retval = (void *) mono_runtime_invoke (method_23, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
 }
 
 static MonoMethod *method_24 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_DidReceiveMemoryWarning (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_set_bntLanguageMode (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -625,13 +652,20 @@ native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_DidReceiveM
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_24)));
 		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_24, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_24, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_25 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_ViewDidLoad (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_get_detailWebView (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -643,15 +677,25 @@ native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_ViewDidLoad
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_25)));
 		}
-	mono_runtime_invoke (method_25, mthis, arg_ptrs, NULL);
-	return NULL;
+	void* retval = (void *) mono_runtime_invoke (method_25, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
 }
 
 static MonoMethod *method_26 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_HadithSourceTable_RowsInSection (id this, SEL sel, id p0, int p1)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_set_detailWebView (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -668,18 +712,15 @@ native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_HadithSourc
 			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_26, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	arg_ptrs [1] = &p1;
-	void* retval = (void *) mono_runtime_invoke (method_26, mthis, arg_ptrs, NULL);
-	void * res;
-	res = *(void * *) mono_object_unbox (retval);
-	return res;
+	mono_runtime_invoke (method_26, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_27 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_HadithSourceTable_RowSelected (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblBookName (id this, SEL sel)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -689,29 +730,25 @@ native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_HadithSourc
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_27)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		bool created0 = false;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_27, 0), &created0);
-		}
-		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		bool created1 = false;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_27, 1), &created1);
-		}
-		arg_ptrs [1] = mobj1;
-	mono_runtime_invoke (method_27, mthis, arg_ptrs, NULL);
-	return NULL;
+	void* retval = (void *) mono_runtime_invoke (method_27, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
 }
 
 static MonoMethod *method_28 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_HadithSourceTable_GetCell (id this, SEL sel, id p0, id p1)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblBookName (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [2];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -728,30 +765,13 @@ native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_HadithSourc
 			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_28, 0), &created0);
 		}
 		arg_ptrs [0] = mobj0;
-	NSObject *nsobj1 = (NSObject *) p1;
-		MonoObject *mobj1 = NULL;
-		bool created1 = false;
-		if (nsobj1) {
-			mobj1 = get_nsobject_with_type_for_ptr_created (nsobj1, false, monotouch_get_parameter_type (method_28, 1), &created1);
-		}
-		arg_ptrs [1] = mobj1;
-	void* retval = (void *) mono_runtime_invoke (method_28, mthis, arg_ptrs, NULL);
-	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
-	}
-	return res;
+	mono_runtime_invoke (method_28, mthis, arg_ptrs, NULL);
+	return NULL;
 }
 
 static MonoMethod *method_29 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_get_bntLanguageMode (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblTitle (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -779,7 +799,7 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_get_bntLanguage
 
 static MonoMethod *method_30 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_set_bntLanguageMode (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblTitle (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -804,7 +824,7 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_set_bntLanguage
 
 static MonoMethod *method_31 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblBookName (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblTitleArabic (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -832,7 +852,7 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblBookName
 
 static MonoMethod *method_32 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblBookName (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblTitleArabic (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -857,7 +877,7 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblBookName
 
 static MonoMethod *method_33 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblTitle (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblTotalCount (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -885,7 +905,7 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblTitle (i
 
 static MonoMethod *method_34 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblTitle (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblTotalCount (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -910,7 +930,7 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblTitle (i
 
 static MonoMethod *method_35 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblTitleArabic (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_get_NextBtn (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -938,7 +958,7 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblTitleAra
 
 static MonoMethod *method_36 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblTitleArabic (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_set_NextBtn (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -963,7 +983,7 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblTitleAra
 
 static MonoMethod *method_37 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_get_NextBtn (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_get_PreviousBtn (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -991,7 +1011,7 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_get_NextBtn (id
 
 static MonoMethod *method_38 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_set_NextBtn (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_set_PreviousBtn (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -1016,7 +1036,7 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_set_NextBtn (id
 
 static MonoMethod *method_39 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_get_PreviousBtn (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_get_txtNarrationDetails (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -1044,7 +1064,7 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_get_PreviousBtn
 
 static MonoMethod *method_40 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_set_PreviousBtn (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_set_txtNarrationDetails (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -1069,37 +1089,34 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_set_PreviousBtn
 
 static MonoMethod *method_41 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_get_txtNarrationDetails (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController__ctor (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
+	if (monotouch_try_get_nsobject (this))
+		return this;
 	if (!method_41)
 		method_41 = get_method_for_selector ([this class], sel).method->method;
-		mthis = NULL;
-		if (this) {
-			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_41)));
-		}
-	void* retval = (void *) mono_runtime_invoke (method_41, mthis, arg_ptrs, NULL);
-	void * res;
-	if (!retval) {
-		res = NULL;
-	} else {
-		id retobj;
-		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
-		[retobj retain];
-		[retobj autorelease];
-		res = retobj;
-	}
-	return res;
+	int handle = (int) this;
+	handle |= 1;
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_41));
+	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
+	mono_runtime_invoke (method_41, mthis, arg_ptrs, NULL);
+	monotouch_create_managed_ref (this, mthis, true);
+	void *params[2];
+	params[0] = mthis;
+	params[1] = &this;
+	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
+	return this;
 }
 
 static MonoMethod *method_42 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_set_txtNarrationDetails (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_DidReceiveMemoryWarning (id this, SEL sel)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1109,45 +1126,38 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_set_txtNarratio
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_42)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		bool created0 = false;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_42, 0), &created0);
-		}
-		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_42, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_43 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController__ctor (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_GoBack (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
-	if (monotouch_try_get_nsobject (this))
-		return this;
 	if (!method_43)
 		method_43 = get_method_for_selector ([this class], sel).method->method;
-	int handle = (int) this;
-	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_43));
-	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_43)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_43, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_43, mthis, arg_ptrs, NULL);
-	monotouch_create_managed_ref (this, mthis, true);
-	void *params[2];
-	params[0] = mthis;
-	params[1] = &this;
-	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
-	return this;
+	return NULL;
 }
 
 static MonoMethod *method_44 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_DidReceiveMemoryWarning (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_ViewDidLoad (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -1165,7 +1175,7 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_DidReceiveMemor
 
 static MonoMethod *method_45 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_GoBack (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_PreviousNarration (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -1190,9 +1200,9 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_GoBack (id this
 
 static MonoMethod *method_46 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_ViewDidLoad (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_btnLanguage (id this, SEL sel, id p0)
 {
-	void *arg_ptrs [0];
+	void *arg_ptrs [1];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1202,13 +1212,20 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_ViewDidLoad (id
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_46)));
 		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_46, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
 	mono_runtime_invoke (method_46, mthis, arg_ptrs, NULL);
 	return NULL;
 }
 
 static MonoMethod *method_47 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_PreviousNarration (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_NarrationViewController_NextNarration (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -1233,9 +1250,9 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_PreviousNarrati
 
 static MonoMethod *method_48 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_btnLanguage (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_BooksViewController_get_bg_image (id this, SEL sel)
 {
-	void *arg_ptrs [1];
+	void *arg_ptrs [0];
 	MonoObject *mthis;
 	if (mono_domain_get () == NULL)
 		mono_jit_thread_attach (NULL);
@@ -1245,20 +1262,23 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_btnLanguage (id
 		if (this) {
 			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_48)));
 		}
-	NSObject *nsobj0 = (NSObject *) p0;
-		MonoObject *mobj0 = NULL;
-		bool created0 = false;
-		if (nsobj0) {
-			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_48, 0), &created0);
-		}
-		arg_ptrs [0] = mobj0;
-	mono_runtime_invoke (method_48, mthis, arg_ptrs, NULL);
-	return NULL;
+	void* retval = (void *) mono_runtime_invoke (method_48, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
 }
 
 static MonoMethod *method_49 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_NarrationViewController_NextNarration (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_BooksViewController_set_bg_image (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -1283,7 +1303,7 @@ native_to_managed_trampoline_HadithBooks_NarrationViewController_NextNarration (
 
 static MonoMethod *method_50 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithBookCell_get_lblArabic (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_BooksViewController_get_booksTable (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -1311,7 +1331,7 @@ native_to_managed_trampoline_HadithBooks_HadithBookCell_get_lblArabic (id this, 
 
 static MonoMethod *method_51 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithBookCell_set_lblArabic (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_BooksViewController_set_booksTable (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -1336,7 +1356,7 @@ native_to_managed_trampoline_HadithBooks_HadithBookCell_set_lblArabic (id this, 
 
 static MonoMethod *method_52 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithBookCell_get_lblEnglish (id this, SEL sel)
+native_to_managed_trampoline_HadithBooks_BooksViewController_get_lblBookTitleArabic (id this, SEL sel)
 {
 	void *arg_ptrs [0];
 	MonoObject *mthis;
@@ -1364,7 +1384,7 @@ native_to_managed_trampoline_HadithBooks_HadithBookCell_get_lblEnglish (id this,
 
 static MonoMethod *method_53 = NULL;
 void *
-native_to_managed_trampoline_HadithBooks_HadithBookCell_set_lblEnglish (id this, SEL sel, id p0)
+native_to_managed_trampoline_HadithBooks_BooksViewController_set_lblBookTitleArabic (id this, SEL sel, id p0)
 {
 	void *arg_ptrs [1];
 	MonoObject *mthis;
@@ -1389,6 +1409,251 @@ native_to_managed_trampoline_HadithBooks_HadithBookCell_set_lblEnglish (id this,
 
 static MonoMethod *method_54 = NULL;
 void *
+native_to_managed_trampoline_HadithBooks_BooksViewController_get_lblHadithBook (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_54)
+		method_54 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_54)));
+		}
+	void* retval = (void *) mono_runtime_invoke (method_54, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
+}
+
+static MonoMethod *method_55 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_BooksViewController_set_lblHadithBook (id this, SEL sel, id p0)
+{
+	void *arg_ptrs [1];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_55)
+		method_55 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_55)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_55, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	mono_runtime_invoke (method_55, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_56 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_BooksViewController__ctor (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (monotouch_try_get_nsobject (this))
+		return this;
+	if (!method_56)
+		method_56 = get_method_for_selector ([this class], sel).method->method;
+	int handle = (int) this;
+	handle |= 1;
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_56));
+	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
+	mono_runtime_invoke (method_56, mthis, arg_ptrs, NULL);
+	monotouch_create_managed_ref (this, mthis, true);
+	void *params[2];
+	params[0] = mthis;
+	params[1] = &this;
+	mono_runtime_invoke (monotouch_register_nsobject, NULL, params, NULL);
+	return this;
+}
+
+static MonoMethod *method_57 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_BooksViewController_DidReceiveMemoryWarning (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_57)
+		method_57 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_57)));
+		}
+	mono_runtime_invoke (method_57, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_58 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_BooksViewController_ViewDidLoad (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_58)
+		method_58 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_58)));
+		}
+	mono_runtime_invoke (method_58, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_59 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_BooksViewController_GoBack (id this, SEL sel, id p0)
+{
+	void *arg_ptrs [1];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_59)
+		method_59 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_59)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_59, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	mono_runtime_invoke (method_59, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_60 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_HadithBookCell_get_lblArabic (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_60)
+		method_60 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_60)));
+		}
+	void* retval = (void *) mono_runtime_invoke (method_60, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
+}
+
+static MonoMethod *method_61 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_HadithBookCell_set_lblArabic (id this, SEL sel, id p0)
+{
+	void *arg_ptrs [1];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_61)
+		method_61 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_61)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_61, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	mono_runtime_invoke (method_61, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_62 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_HadithBookCell_get_lblEnglish (id this, SEL sel)
+{
+	void *arg_ptrs [0];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_62)
+		method_62 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_62)));
+		}
+	void* retval = (void *) mono_runtime_invoke (method_62, mthis, arg_ptrs, NULL);
+	void * res;
+	if (!retval) {
+		res = NULL;
+	} else {
+		id retobj;
+		mono_field_get_value (retval, monotouch_nsobject_handle_field, (void **) &retobj);
+		[retobj retain];
+		[retobj autorelease];
+		res = retobj;
+	}
+	return res;
+}
+
+static MonoMethod *method_63 = NULL;
+void *
+native_to_managed_trampoline_HadithBooks_HadithBookCell_set_lblEnglish (id this, SEL sel, id p0)
+{
+	void *arg_ptrs [1];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	if (!method_63)
+		method_63 = get_method_for_selector ([this class], sel).method->method;
+		mthis = NULL;
+		if (this) {
+			mthis = get_nsobject_with_type_for_ptr (this, false, mono_class_get_type (mono_method_get_class (method_63)));
+		}
+	NSObject *nsobj0 = (NSObject *) p0;
+		MonoObject *mobj0 = NULL;
+		bool created0 = false;
+		if (nsobj0) {
+			mobj0 = get_nsobject_with_type_for_ptr_created (nsobj0, false, monotouch_get_parameter_type (method_63, 0), &created0);
+		}
+		arg_ptrs [0] = mobj0;
+	mono_runtime_invoke (method_63, mthis, arg_ptrs, NULL);
+	return NULL;
+}
+
+static MonoMethod *method_64 = NULL;
+void *
 native_to_managed_trampoline_HadithBooks_HadithBookCell__ctor (id this, SEL sel)
 {
 	void *arg_ptrs [0];
@@ -1397,13 +1662,13 @@ native_to_managed_trampoline_HadithBooks_HadithBookCell__ctor (id this, SEL sel)
 		mono_jit_thread_attach (NULL);
 	if (monotouch_try_get_nsobject (this))
 		return this;
-	if (!method_54)
-		method_54 = get_method_for_selector ([this class], sel).method->method;
+	if (!method_64)
+		method_64 = get_method_for_selector ([this class], sel).method->method;
 	int handle = (int) this;
 	handle |= 1;
-	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_54));
+	mthis = mono_object_new (mono_domain_get (), mono_method_get_class (method_64));
 	mono_field_set_value (mthis, monotouch_nsobject_handle_field, &handle);
-	mono_runtime_invoke (method_54, mthis, arg_ptrs, NULL);
+	mono_runtime_invoke (method_64, mthis, arg_ptrs, NULL);
 	monotouch_create_managed_ref (this, mthis, true);
 	void *params[2];
 	params[0] = mthis;
@@ -1416,50 +1681,54 @@ native_to_managed_trampoline_HadithBooks_HadithBookCell__ctor (id this, SEL sel)
 
 static MTClassMap __monotouch_class_map [] = {
 	{"NSObject", "MonoTouch.Foundation.NSObject, monotouch", 0},
-	{"NSString", "MonoTouch.Foundation.NSString, monotouch", 0},
-	{"NSUserDefaults", "MonoTouch.Foundation.NSUserDefaults, monotouch", 0},
+	{"UIColor", "MonoTouch.UIKit.UIColor, monotouch", 0},
 	{"NSAutoreleasePool", "MonoTouch.Foundation.NSAutoreleasePool, monotouch", 0},
 	{"__NSObject_Disposer", "MonoTouch.Foundation.NSObject+NSObject_Disposer, monotouch", 0},
 	{"NSException", "MonoTouch.Foundation.NSException, monotouch", 0},
+	{"UIDevice", "MonoTouch.UIKit.UIDevice, monotouch", 0},
+	{"UIFont", "MonoTouch.UIKit.UIFont, monotouch", 0},
 	{"UIScreen", "MonoTouch.UIKit.UIScreen, monotouch", 0},
 	{"UIResponder", "MonoTouch.UIKit.UIResponder, monotouch", 0},
 	{"UINib", "MonoTouch.UIKit.UINib, monotouch", 0},
-	{"UIColor", "MonoTouch.UIKit.UIColor, monotouch", 0},
-	{"NSIndexPath", "MonoTouch.Foundation.NSIndexPath, monotouch", 0},
-	{"CALayer", "MonoTouch.CoreAnimation.CALayer, monotouch", 0},
-	{"NSArray", "MonoTouch.Foundation.NSArray, monotouch", 0},
+	{"NSUserDefaults", "MonoTouch.Foundation.NSUserDefaults, monotouch", 0},
 	{"NSBundle", "MonoTouch.Foundation.NSBundle, monotouch", 0},
+	{"NSArray", "MonoTouch.Foundation.NSArray, monotouch", 0},
+	{"NSIndexPath", "MonoTouch.Foundation.NSIndexPath, monotouch", 0},
+	{"NSString", "MonoTouch.Foundation.NSString, monotouch", 0},
+	{"NSURL", "MonoTouch.Foundation.NSUrl, monotouch", 0},
 	{"NSDictionary", "MonoTouch.Foundation.NSDictionary, monotouch", 0},
-	{"UIViewController", "MonoTouch.UIKit.UIViewController, monotouch", 0},
-	{"UIView", "MonoTouch.UIKit.UIView, monotouch", 0},
-	{"UIApplication", "MonoTouch.UIKit.UIApplication, monotouch", 0},
 	{"AppDelegate", "HadithBooks.AppDelegate, HadithBooks", 0},
-	{"HadithBooks.BooksTable", "HadithBooks.BooksTable, HadithBooks", 0},
-	{"BooksViewController", "HadithBooks.BooksViewController, HadithBooks", 0},
-	{"UILabel", "MonoTouch.UIKit.UILabel, monotouch", 0},
-	{"UIScrollView", "MonoTouch.UIKit.UIScrollView, monotouch", 0},
-	{"HadithSourcesViewController", "HadithBooks.HadithSourcesViewController, HadithBooks", 0},
-	{"HadithBooks.HadithSourcesViewController+HadithSourceTable", "HadithBooks.HadithSourcesViewController+HadithSourceTable, HadithBooks", 0},
+	{"UIView", "MonoTouch.UIKit.UIView, monotouch", 0},
+	{"UIViewController", "MonoTouch.UIKit.UIViewController, monotouch", 0},
+	{"UIApplication", "MonoTouch.UIKit.UIApplication, monotouch", 0},
 	{"UIWindow", "MonoTouch.UIKit.UIWindow, monotouch", 0},
-	{"UIAlertView", "MonoTouch.UIKit.UIAlertView, monotouch", 0},
-	{"UITableViewCell", "MonoTouch.UIKit.UITableViewCell, monotouch", 0},
-	{"UIControl", "MonoTouch.UIKit.UIControl, monotouch", 0},
+	{"UIImageView", "MonoTouch.UIKit.UIImageView, monotouch", 0},
+	{"UILabel", "MonoTouch.UIKit.UILabel, monotouch", 0},
+	{"HadithSourcesViewController", "HadithBooks.HadithSourcesViewController, HadithBooks", 0},
+	{"HadithBooks.BooksViewController+BooksTable", "HadithBooks.BooksViewController+BooksTable, HadithBooks", 0},
+	{"HadithBooks.HadithSourcesViewController+HadithSourceTable", "HadithBooks.HadithSourcesViewController+HadithSourceTable, HadithBooks", 0},
 	{"NarrationViewController", "HadithBooks.NarrationViewController, HadithBooks", 0},
-	{"UITextView", "MonoTouch.UIKit.UITextView, monotouch", 0},
+	{"BooksViewController", "HadithBooks.BooksViewController, HadithBooks", 0},
+	{"UIControl", "MonoTouch.UIKit.UIControl, monotouch", 0},
+	{"UITableViewCell", "MonoTouch.UIKit.UITableViewCell, monotouch", 0},
+	{"UIWebView", "MonoTouch.UIKit.UIWebView, monotouch", 0},
+	{"UIAlertView", "MonoTouch.UIKit.UIAlertView, monotouch", 0},
+	{"UIScrollView", "MonoTouch.UIKit.UIScrollView, monotouch", 0},
 	{"HadithBookCell", "HadithBooks.HadithBookCell, HadithBooks", 0},
-	{"UITableView", "MonoTouch.UIKit.UITableView, monotouch", 0},
 	{"UIButton", "MonoTouch.UIKit.UIButton, monotouch", 0},
+	{"UITextView", "MonoTouch.UIKit.UITextView, monotouch", 0},
+	{"UITableView", "MonoTouch.UIKit.UITableView, monotouch", 0},
 };
 
 static MTClass __monotouch_classes [] = {
 	{"__NSObject_Disposer", "NSObject", 1, 2, 0},
-	{"UITableViewSource", "NSObject", 1, 1, 0},
 	{"AppDelegate", "NSObject", 1, 2, 0},
-	{"HadithBooks.BooksTable", "NSObject", 1, 3, 0},
-	{"BooksViewController", "UIViewController", 1, 10, 0},
-	{"HadithSourcesViewController", "UIViewController", 1, 7, 0},
+	{"UITableViewSource", "NSObject", 1, 1, 0},
+	{"HadithSourcesViewController", "UIViewController", 1, 9, 0},
+	{"HadithBooks.BooksViewController+BooksTable", "NSObject", 1, 3, 0},
 	{"HadithBooks.HadithSourcesViewController+HadithSourceTable", "NSObject", 1, 3, 0},
-	{"NarrationViewController", "UIViewController", 1, 21, 0},
+	{"NarrationViewController", "UIViewController", 1, 27, 0},
+	{"BooksViewController", "UIViewController", 1, 12, 0},
 	{"HadithBookCell", "UITableViewCell", 1, 5, 0},
 };
 
@@ -1478,22 +1747,11 @@ static MTIvar __monotouch_ivars [] = {
 static MTMethod __monotouch_methods [] = {
 	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_Foundation_NSObject_NSObject_Disposer__ctor},
 	{"drain:","v@:@",1, &native_to_managed_trampoline_MonoTouch_Foundation_NSObject_NSObject_Disposer_Drain},
-	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITableViewSource__ctor},
 	{"init","@@:",0, &native_to_managed_trampoline_HadithBooks_AppDelegate__ctor},
 	{"application:didFinishLaunchingWithOptions:","B@:@@",0, &native_to_managed_trampoline_HadithBooks_AppDelegate_FinishedLaunching},
-	{"tableView:numberOfRowsInSection:","i@:@i",0, &native_to_managed_trampoline_HadithBooks_BooksTable_RowsInSection},
-	{"tableView:didSelectRowAtIndexPath:","v@:@@",0, &native_to_managed_trampoline_HadithBooks_BooksTable_RowSelected},
-	{"tableView:cellForRowAtIndexPath:","@@:@@",0, &native_to_managed_trampoline_HadithBooks_BooksTable_GetCell},
-	{"booksTable","@@:",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_get_booksTable},
-	{"setBooksTable:","v@:@",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_set_booksTable},
-	{"lblBookTitleArabic","@@:",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_get_lblBookTitleArabic},
-	{"setLblBookTitleArabic:","v@:@",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_set_lblBookTitleArabic},
-	{"lblHadithBook","@@:",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_get_lblHadithBook},
-	{"setLblHadithBook:","v@:@",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_set_lblHadithBook},
-	{"init","@@:",0, &native_to_managed_trampoline_HadithBooks_BooksViewController__ctor},
-	{"didReceiveMemoryWarning","v@:",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_DidReceiveMemoryWarning},
-	{"viewDidLoad","v@:",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_ViewDidLoad},
-	{"GoBack:","v@:@",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_GoBack},
+	{"init","@@:",0, &native_to_managed_trampoline_MonoTouch_UIKit_UITableViewSource__ctor},
+	{"bg_image","@@:",0, &native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_get_bg_image},
+	{"setBg_image:","v@:@",0, &native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_set_bg_image},
 	{"headerView","@@:",0, &native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_get_headerView},
 	{"setHeaderView:","v@:@",0, &native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_set_headerView},
 	{"sourceTable","@@:",0, &native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_get_sourceTable},
@@ -1501,17 +1759,26 @@ static MTMethod __monotouch_methods [] = {
 	{"init","@@:",0, &native_to_managed_trampoline_HadithBooks_HadithSourcesViewController__ctor},
 	{"didReceiveMemoryWarning","v@:",0, &native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_DidReceiveMemoryWarning},
 	{"viewDidLoad","v@:",0, &native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_ViewDidLoad},
+	{"tableView:numberOfRowsInSection:","i@:@i",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_BooksTable_RowsInSection},
+	{"tableView:didSelectRowAtIndexPath:","v@:@@",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_BooksTable_RowSelected},
+	{"tableView:cellForRowAtIndexPath:","@@:@@",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_BooksTable_GetCell},
 	{"tableView:numberOfRowsInSection:","i@:@i",0, &native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_HadithSourceTable_RowsInSection},
 	{"tableView:didSelectRowAtIndexPath:","v@:@@",0, &native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_HadithSourceTable_RowSelected},
 	{"tableView:cellForRowAtIndexPath:","@@:@@",0, &native_to_managed_trampoline_HadithBooks_HadithSourcesViewController_HadithSourceTable_GetCell},
+	{"bg_image","@@:",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_get_bg_image},
+	{"setBg_image:","v@:@",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_set_bg_image},
 	{"bntLanguageMode","@@:",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_get_bntLanguageMode},
 	{"setBntLanguageMode:","v@:@",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_set_bntLanguageMode},
+	{"detailWebView","@@:",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_get_detailWebView},
+	{"setDetailWebView:","v@:@",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_set_detailWebView},
 	{"lblBookName","@@:",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblBookName},
 	{"setLblBookName:","v@:@",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblBookName},
 	{"lblTitle","@@:",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblTitle},
 	{"setLblTitle:","v@:@",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblTitle},
 	{"lblTitleArabic","@@:",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblTitleArabic},
 	{"setLblTitleArabic:","v@:@",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblTitleArabic},
+	{"lblTotalCount","@@:",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_get_lblTotalCount},
+	{"setLblTotalCount:","v@:@",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_set_lblTotalCount},
 	{"NextBtn","@@:",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_get_NextBtn},
 	{"setNextBtn:","v@:@",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_set_NextBtn},
 	{"PreviousBtn","@@:",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_get_PreviousBtn},
@@ -1525,6 +1792,18 @@ static MTMethod __monotouch_methods [] = {
 	{"PreviousNarration:","v@:@",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_PreviousNarration},
 	{"btnLanguage:","v@:@",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_btnLanguage},
 	{"NextNarration:","v@:@",0, &native_to_managed_trampoline_HadithBooks_NarrationViewController_NextNarration},
+	{"bg_image","@@:",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_get_bg_image},
+	{"setBg_image:","v@:@",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_set_bg_image},
+	{"booksTable","@@:",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_get_booksTable},
+	{"setBooksTable:","v@:@",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_set_booksTable},
+	{"lblBookTitleArabic","@@:",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_get_lblBookTitleArabic},
+	{"setLblBookTitleArabic:","v@:@",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_set_lblBookTitleArabic},
+	{"lblHadithBook","@@:",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_get_lblHadithBook},
+	{"setLblHadithBook:","v@:@",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_set_lblHadithBook},
+	{"init","@@:",0, &native_to_managed_trampoline_HadithBooks_BooksViewController__ctor},
+	{"didReceiveMemoryWarning","v@:",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_DidReceiveMemoryWarning},
+	{"viewDidLoad","v@:",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_ViewDidLoad},
+	{"GoBack:","v@:@",0, &native_to_managed_trampoline_HadithBooks_BooksViewController_GoBack},
 	{"lblArabic","@@:",0, &native_to_managed_trampoline_HadithBooks_HadithBookCell_get_lblArabic},
 	{"setLblArabic:","v@:@",0, &native_to_managed_trampoline_HadithBooks_HadithBookCell_set_lblArabic},
 	{"lblEnglish","@@:",0, &native_to_managed_trampoline_HadithBooks_HadithBookCell_get_lblEnglish},
@@ -1535,7 +1814,7 @@ static MTMethod __monotouch_methods [] = {
 static MTProperty __monotouch_properties [] = {
 };
 
-int __monotouch_map_count = 34;
+int __monotouch_map_count = 38;
 static int __monotouch_class_count = 9;
 
 void monotouch_create_classes (void) {

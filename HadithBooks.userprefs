@@ -1,20 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPad.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HadithBooks/HadithSourcesViewController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HadithBooks/Info.plist">
     <Files>
-      <File FileName="HadithBooks/HadithSourcesViewController.cs" Line="18" Column="149" />
-      <File FileName="HadithBooks/BooksTable.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/NarrationViewController.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/HadithSourcesViewController.cs" Line="45" Column="51" />
+      <File FileName="HadithBooks/NarrationViewController.cs" Line="59" Column="5" />
+      <File FileName="HadithBooks/AppDelegate.cs" Line="27" Column="55" />
       <File FileName="HadithBooks/HadithSourcesViewController.designer.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/NarrationViewController.designer.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/Entitlements.plist" />
       <File FileName="HadithBooks/Info.plist" />
-      <File FileName="HadithBooks/BooksViewController.cs" Line="17" Column="3" />
+      <File FileName="HadithBooks/BooksViewController.cs" Line="47" Column="5" />
       <File FileName="HadithBooks/Main.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/BookCell.designer.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/BookCell.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/HadithBookCell.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/HadithBookCell.cs" Line="39" Column="41" />
       <File FileName="HadithBooks/HadithBookCell.designer.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/Model/HadithSource.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/BooksViewController.designer.cs" Line="1" Column="1" />
@@ -22,11 +21,10 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="HadithBooks" expanded="True">
-            <Node name="Resources" expanded="True" />
+          <Node name="HadithBooks" expanded="True" selected="True">
+            <Node name="References" expanded="True" />
             <Node name="BooksViewController.cs" expanded="True" />
             <Node name="HadithSourcesViewController.cs" expanded="True" />
-            <Node name="HadithSourcesViewController_iPhone.xib" selected="True" />
           </Node>
         </State>
       </Pad>

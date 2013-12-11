@@ -46,9 +46,24 @@ namespace HadithBooks
 			}
 			Add (sourceTable);
 
+
+
 		}
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (false);
 
+			var source_id = NSUserDefaults.StandardUserDefaults.IntForKey("source_id");
+//			var book_id = NSUserDefaults.StandardUserDefaults.IntForKey("book_id");
+			if (source_id > 0) {
+				var source = HadithDataContext.Get_All_Hadith_Sources.Where(hs => hs.SourceId == source_id).FirstOrDefault();
 
+				if (source != null) {
+					BooksViewController booksView = new BooksViewController (source.EnglishTitle, source.ArabicTitle, source.SourceId);
+					this.PresentViewController (booksView, false, null);
+				}
+			}
+		}
 	
 		public class HadithSourceTable : UITableViewSource {
 			protected string[] tableItems;
@@ -74,12 +89,13 @@ namespace HadithBooks
 			/// </summary>
 			public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 			{
-				BooksViewController booksView = new BooksViewController(HadithDataContext.Get_All_Hadith_Sources.ElementAt (indexPath.Row));
+				var source = HadithDataContext.Get_All_Hadith_Sources.ElementAt (indexPath.Row);
+				BooksViewController booksView = new BooksViewController (source.EnglishTitle, source.ArabicTitle, source.SourceId);
 
 
 				//window.RootViewController = new HadithSourcesViewController ();
-				booksView.ModalTransitionStyle = UIModalTransitionStyle.CrossDissolve;
-				this.parentController.PresentViewController (booksView, true, null);
+//				booksView.ModalTransitionStyle = UIModalTransitionStyle.;
+				this.parentController.PresentViewController (booksView, false, null);
 			}
 
 			public override UITableViewCell GetCell (UITableView tableView, MonoTouch.Foundation.NSIndexPath indexPath)

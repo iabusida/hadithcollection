@@ -32,6 +32,7 @@
 - (void)dealloc {
     [bg_image release];
     [lblTotalCount release];
+    [detailWebView release];
     [super dealloc];
 }
 @end

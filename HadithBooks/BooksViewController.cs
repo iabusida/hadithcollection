@@ -5,16 +5,18 @@ using MonoTouch.UIKit;
 using System.Collections.Generic;
 using System.Linq;
 using MonoTouch.ObjCRuntime;
-
+using System.Collections;
 namespace HadithBooks
 {
 	public partial class BooksViewController : UIViewController
 	{
 
 
-		private HadithSource hadithSource = null;
+		private List<Book> Books = null;
+		private string sourceTitle_Arabic { get; set; }
+		private string sourceTitle_English { get; set; }
 
-				static bool UserInterfaceIdiomIsPhone {
+		static bool UserInterfaceIdiomIsPhone {
 			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
 		}
 		public BooksViewController () : base (UserInterfaceIdiomIsPhone ? "BooksViewController_iPhone" : "BooksViewController_iPad", null)
@@ -22,9 +24,11 @@ namespace HadithBooks
 		}
 
 
-		public BooksViewController(HadithSource hadithSource): base (UserInterfaceIdiomIsPhone ? "BooksViewController_iPhone" : "BooksViewController_iPad", null)
+		public BooksViewController(string title_english, string title_arabic, int source_id): base (UserInterfaceIdiomIsPhone ? "BooksViewController_iPhone" : "BooksViewController_iPad", null)
 		{
-			this.hadithSource = hadithSource;
+			this.Books = HadithDataContext.GetBooksBySourceId (source_id); //hadithSource;
+			this.sourceTitle_Arabic = title_arabic;
+			this.sourceTitle_English = title_english;
 
 		}
 		public override void DidReceiveMemoryWarning ()
@@ -35,6 +39,16 @@ namespace HadithBooks
 			// Release any cached data, images, etc that aren't in use.
 		}
 
+
+		public void RemoveCurrentLocation()
+		{
+
+			NSUserDefaults.StandardUserDefaults.SetInt (0, "source_id");
+			NSUserDefaults.StandardUserDefaults.SetInt (0, "book_id");
+			NSUserDefaults.StandardUserDefaults.SetInt (0, "narration_id");
+			NSUserDefaults.StandardUserDefaults.Synchronize();
+
+		}
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
@@ -45,14 +59,33 @@ namespace HadithBooks
 			if (window.Frame.Height == 568) {
 				bg_image.Frame = new RectangleF (0, 0, 320, 568);
 			}
-			booksTable.Source = new BooksTable(this, hadithSource.Books);
+			booksTable.Source = new BooksTable(this, Books);
 			Add (booksTable);
-			lblHadithBook.Text = hadithSource.EnglishTitle;
-			lblBookTitleArabic.Text = hadithSource.ArabicTitle;
+			lblHadithBook.Text = this.sourceTitle_English;
+			lblBookTitleArabic.Text = this.sourceTitle_Arabic;
 			// Perform any additional setup after loading the view, typically from a nib.
+		}
+
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (false);
+
+
+			var book_id = NSUserDefaults.StandardUserDefaults.IntForKey("source_id");
+
+			if (book_id > 0) {
+				var currentBook = Books.Where (b => b.BookNumber == book_id).FirstOrDefault ();
+				if (currentBook != null) {
+					NarrationViewController narrationView = new NarrationViewController (Books,currentBook.BookNumber);
+					this.PresentViewController (narrationView, false, null);
+
+				}
+
+			}
 		}
 		partial void GoBack (MonoTouch.Foundation.NSObject sender)
 		{
+			RemoveCurrentLocation();
 			this.DismissViewController(true, null);
 		}
 

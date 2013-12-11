@@ -19,6 +19,9 @@ namespace HadithBooks
 		MonoTouch.UIKit.UIButton bntLanguageMode { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UIWebView detailWebView { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UILabel lblBookName { get; set; }
 
 		[Outlet]
@@ -56,6 +59,11 @@ namespace HadithBooks
 			if (lblTotalCount != null) {
 				lblTotalCount.Dispose ();
 				lblTotalCount = null;
+			}
+
+			if (detailWebView != null) {
+				detailWebView.Dispose ();
+				detailWebView = null;
 			}
 
 			if (bg_image != null) {

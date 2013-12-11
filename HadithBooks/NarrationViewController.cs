@@ -5,6 +5,7 @@ using MonoTouch.UIKit;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace HadithBooks
 {
@@ -13,8 +14,9 @@ namespace HadithBooks
 		private List<Narration> NarrationList = null;
 		private List<Book> HadithBooks = null;
 		private int CurrentBook;
-		private int CurrentNarration = 0;
+		private int CurrentNarration { get; set; }
 		private string show_in_arabic_key = "show_in_arabic_narration";
+		private string DetailViewDiv = null;
 
 		static bool UserInterfaceIdiomIsPhone {
 			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
@@ -29,8 +31,14 @@ namespace HadithBooks
 			this.HadithBooks = books;
 			NarrationList = new List<Narration> ();
 			CurrentBook = selectedBook;
-
+			CurrentNarration = 0;
 			NarrationList = HadithDataContext.GetNarrationsByBookId (this.HadithBooks [selectedBook].BookNumber);
+
+			var narration_id = NSUserDefaults.StandardUserDefaults.IntForKey("narration_id");
+			if (narration_id > 0) {
+				CurrentNarration = narration_id;
+			}
+
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -43,6 +51,7 @@ namespace HadithBooks
 
 		partial void GoBack (MonoTouch.Foundation.NSObject sender)
 		{
+			RemoveCurrentLocation();
 			this.DismissViewController(true, null);
 		}
 
@@ -50,6 +59,15 @@ namespace HadithBooks
 		{
 			base.ViewDidLoad ();
 
+			if (UserInterfaceIdiomIsPhone) {
+
+				DetailViewDiv = "<div style=\"padding-right: 15px;text-align:justify;font-size: 18px;color:white;\"><span class=\"saws\"></span>{0}</div>";
+
+			} else {
+
+				DetailViewDiv = "<div style=\"padding-right: 15px;text-align:justify;font-size: 30px;color:white;\">{0}</div>";
+			}
+			detailWebView.Opaque = false;
 			var window = new UIWindow (UIScreen.MainScreen.Bounds);
 
 			if (window.Frame.Height == 568) {
@@ -57,26 +75,12 @@ namespace HadithBooks
 				NextBtn.Frame = new RectangleF(201, 484, 58, 29);
 				PreviousBtn.Frame = new RectangleF (56,485,85,28);
 				lblTotalCount.Frame = new RectangleF(175,455,100,21);
-				txtNarrationDetails.Frame = new RectangleF(28,90,257,357);
+//				txtNarrationDetails.Frame = new RectangleF(28,90,257,357);
 			}
 
 			if (!UserInterfaceIdiomIsPhone) {
 
-				UIStringAttributes stringAttributes = new UIStringAttributes {
-					ParagraphStyle = new NSMutableParagraphStyle () { LineSpacing = 20.0f }
-				};
-				var AttributedText = new NSMutableAttributedString (txtNarrationDetails.Text);
-				AttributedText.AddAttributes (stringAttributes, new NSRange (0, txtNarrationDetails.Text.Length));
-				txtNarrationDetails.AttributedText = AttributedText;
-
-
 			}
-			txtNarrationDetails.Layer.BorderColor = UIColor.Gray.CGColor;
-			txtNarrationDetails.Layer.BorderWidth = 1.0f;
-			txtNarrationDetails.Layer.CornerRadius = 2;
-			txtNarrationDetails.ClipsToBounds = true;
-			txtNarrationDetails.TextColor = UIColor.White;
-
 			if (NarrationList.Count () > 0) {
 				updateScreen ();
 			}
@@ -107,26 +111,52 @@ namespace HadithBooks
 
 		}
 
+		public void saveCurrentLocation(int source_id, int book_id, int narration_id)
+		{
+
+			NSUserDefaults.StandardUserDefaults.SetInt (source_id, "source_id");
+			NSUserDefaults.StandardUserDefaults.SetInt (book_id, "book_id");
+			NSUserDefaults.StandardUserDefaults.SetInt (narration_id, "narration_id");
+			NSUserDefaults.StandardUserDefaults.Synchronize();
+
+		}
+
+		public void RemoveCurrentLocation()
+		{
+
+			NSUserDefaults.StandardUserDefaults.SetInt (0, "source_id");
+			NSUserDefaults.StandardUserDefaults.SetInt (0, "book_id");
+			NSUserDefaults.StandardUserDefaults.SetInt (0, "narration_id");
+			NSUserDefaults.StandardUserDefaults.Synchronize();
+
+		}
 		private void updateScreen()
 		{
 
+			string contentDirectoryPath = Path.Combine (NSBundle.MainBundle.BundlePath, "Content/");
 
-			Regex regex = new Regex(@"[ ]{2,}", RegexOptions.None);     
+
+			PreviousBtn.Hidden = CurrentBook == 0 && CurrentNarration == 0;
+			
+
 			if (NSUserDefaults.StandardUserDefaults.BoolForKey(show_in_arabic_key)) 
 			{
-				txtNarrationDetails.Text = NarrationList [CurrentNarration].ArabicDetails;
+
+				detailWebView.LoadHtmlString(String.Format(DetailViewDiv,NarrationList [CurrentNarration].ArabicDetails), new NSUrl(contentDirectoryPath, true));
 				lblTitle.Text = this.HadithBooks [CurrentBook].ArabicTitle;
 				bntLanguageMode.SetTitle ("Show in English", UIControlState.Normal);
 
 			} 
 			else
 			{
-				var narration = regex.Replace(NarrationList [CurrentNarration].EnglishDetails,@" ").Trim();
-				txtNarrationDetails.Text = narration;
+				var imagePath = NSBundle.MainBundle.PathForResource ("sallallahu_alaihi_wa_sallam", "png");
+				var imgHTMLTag = string.Format("<span style=\"background-image:url('file://{0}');background-size: 15px 15px;background-position: 50% 50%;background-repeat: no-repeat;display: inline;height: 0px;width: 0px;padding: 0 7.5px 0 7.5px;\"></span>", imagePath);
+				detailWebView.LoadHtmlString(String.Format(DetailViewDiv,NarrationList [CurrentNarration].EnglishDetails.Replace("()", string.Format("({0})", imgHTMLTag))), new NSUrl(contentDirectoryPath, true));
 				lblTitle.Text = this.HadithBooks [CurrentBook].EnglishTitle;
 				bntLanguageMode.SetTitle ("تظهر باللغة العربية", UIControlState.Normal);
 
 			}
+			saveCurrentLocation (this.HadithBooks [CurrentBook].BookNumber, CurrentBook, CurrentNarration);
 			lblTotalCount.Text = String.Format ("{0}/{1}", CurrentNarration + 1, NarrationList.Count ());
 
 		}

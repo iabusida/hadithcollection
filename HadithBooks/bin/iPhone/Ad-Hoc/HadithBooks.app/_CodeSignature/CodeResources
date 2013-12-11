@@ -8,25 +8,45 @@
 		<data>
 		YQONoHTCbxFKAx74CUWrqpItXOU=
 		</data>
+		<key>BooksViewController_iPad.nib</key>
+		<data>
+		OLk/hRcgZRNIOrMdUFdMIcA4JR0=
+		</data>
+		<key>BooksViewController_iPhone.nib</key>
+		<data>
+		HiM4GufNAxBfXjvXE+wT2qf0R3k=
+		</data>
 		<key>Default-568h@2x.png</key>
 		<data>
 		h4KgJgWpxdjfyoXM+WlZS2uDdqs=
 		</data>
 		<key>HadithBookCell.nib</key>
 		<data>
-		expXHwDSJBRWnY9lJzWG/VUgmwU=
+		k7232ah1/DHgYMTdX+bxiyHB8As=
+		</data>
+		<key>HadithBookCell_iPad.nib</key>
+		<data>
+		zPp+5rQLilO39sX2MQqEdsjy2Rg=
 		</data>
 		<key>HadithBooks.exe</key>
 		<data>
-		rzzthNQ0tCWTalRpJ4YCoY3XctE=
+		cI6vv3wY7aDG/zTAwDq6s7pKt9E=
 		</data>
 		<key>HadithSourcesViewController.nib</key>
 		<data>
 		XNN37tGqam3bkw2WLDcmN61UcWU=
 		</data>
+		<key>HadithSourcesViewController_iPad.nib</key>
+		<data>
+		SqArsP6kMD7a7wtwMHXx6inSU2A=
+		</data>
+		<key>HadithSourcesViewController_iPhone.nib</key>
+		<data>
+		O3iQWYrTsJHTNoj+gDfMEIRkkTY=
+		</data>
 		<key>Mono.Data.Sqlite.dll</key>
 		<data>
-		xqajK5LtAJ3925kDDL6DKs+0auo=
+		ST6o5avl38RubueBe1E9fbgwaaw=
 		</data>
 		<key>NOTICE</key>
 		<data>
@@ -36,33 +56,41 @@
 		<data>
 		TN0oPecYCpjx19RSUmWtE8H8JVs=
 		</data>
+		<key>NarrationViewController_iPad.nib</key>
+		<data>
+		x7DZ9DYm/kbuOAqpouuIDvogWio=
+		</data>
+		<key>NarrationViewController_iPhone.nib</key>
+		<data>
+		pNLwWITSikDVV6Y1BFdISDLlX+8=
+		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
 		<key>System.ComponentModel.DataAnnotations.dll</key>
 		<data>
-		ao50alLl3RDOlE49wcmPgNvV0l4=
+		TqTeoL7hPOIaR1ONvBRUW8xWTcs=
 		</data>
 		<key>System.Core.dll</key>
 		<data>
-		ZSFTpfIR+EgcfSBMfmlVjWfBuxk=
+		bBjgPbviF9DBlOVLfTv0cI0haTo=
 		</data>
 		<key>System.Data.dll</key>
 		<data>
-		F9L1d40VEzZ587EF/I5Imwg0ox4=
+		XF0FKcPUqA+xvtqjqe63ZeEJs3g=
 		</data>
 		<key>System.Transactions.dll</key>
 		<data>
-		vIQWGrm00sLoxqrB1ZcGJNE5nDA=
+		AH+aXyV/ofisODZjvXInf3an/Jg=
 		</data>
 		<key>System.Xml.dll</key>
 		<data>
-		SD1l0qOfIcqueidJ2Z529XgsVtY=
+		N1R22Jx0DUHNVYxF3USIAnc4Bjo=
 		</data>
 		<key>System.dll</key>
 		<data>
-		iVPNW67ryv9ZCAsueZFYhyiAGS0=
+		GSSgWqs9tj/jJznmZ3qZFDDcjHM=
 		</data>
 		<key>bg_small.png</key>
 		<data>
@@ -84,13 +112,21 @@
 		<data>
 		QUA2+rf8xc9G7+pDpzAndmKjYCc=
 		</data>
+		<key>hadithCover_iPad.png</key>
+		<data>
+		FXjcLEHtt2o3eza48aE/oCS4NI0=
+		</data>
 		<key>monotouch.dll</key>
 		<data>
-		oQyv+sJ+DsepWtLkcZsVILchhAY=
+		GwXJtqoscA8ys/uBXUJYF34ifRU=
 		</data>
 		<key>mscorlib.dll</key>
 		<data>
-		L3jY0SLFECK3VnZ0ynSYhqSWn7o=
+		s2U1g1VnKiiosNZg390tU8WxySw=
+		</data>
+		<key>vintage_paper.jpg</key>
+		<data>
+		vRg2ziSTNZsf1TU85q5fItnmaS8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -99,25 +135,45 @@
 		<data>
 		YQONoHTCbxFKAx74CUWrqpItXOU=
 		</data>
+		<key>BooksViewController_iPad.nib</key>
+		<data>
+		OLk/hRcgZRNIOrMdUFdMIcA4JR0=
+		</data>
+		<key>BooksViewController_iPhone.nib</key>
+		<data>
+		HiM4GufNAxBfXjvXE+wT2qf0R3k=
+		</data>
 		<key>Default-568h@2x.png</key>
 		<data>
 		h4KgJgWpxdjfyoXM+WlZS2uDdqs=
 		</data>
 		<key>HadithBookCell.nib</key>
 		<data>
-		expXHwDSJBRWnY9lJzWG/VUgmwU=
+		k7232ah1/DHgYMTdX+bxiyHB8As=
+		</data>
+		<key>HadithBookCell_iPad.nib</key>
+		<data>
+		zPp+5rQLilO39sX2MQqEdsjy2Rg=
 		</data>
 		<key>HadithBooks.exe</key>
 		<data>
-		rzzthNQ0tCWTalRpJ4YCoY3XctE=
+		cI6vv3wY7aDG/zTAwDq6s7pKt9E=
 		</data>
 		<key>HadithSourcesViewController.nib</key>
 		<data>
 		XNN37tGqam3bkw2WLDcmN61UcWU=
 		</data>
+		<key>HadithSourcesViewController_iPad.nib</key>
+		<data>
+		SqArsP6kMD7a7wtwMHXx6inSU2A=
+		</data>
+		<key>HadithSourcesViewController_iPhone.nib</key>
+		<data>
+		O3iQWYrTsJHTNoj+gDfMEIRkkTY=
+		</data>
 		<key>Mono.Data.Sqlite.dll</key>
 		<data>
-		xqajK5LtAJ3925kDDL6DKs+0auo=
+		ST6o5avl38RubueBe1E9fbgwaaw=
 		</data>
 		<key>NOTICE</key>
 		<data>
@@ -127,33 +183,41 @@
 		<data>
 		TN0oPecYCpjx19RSUmWtE8H8JVs=
 		</data>
+		<key>NarrationViewController_iPad.nib</key>
+		<data>
+		x7DZ9DYm/kbuOAqpouuIDvogWio=
+		</data>
+		<key>NarrationViewController_iPhone.nib</key>
+		<data>
+		pNLwWITSikDVV6Y1BFdISDLlX+8=
+		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
 		<key>System.ComponentModel.DataAnnotations.dll</key>
 		<data>
-		ao50alLl3RDOlE49wcmPgNvV0l4=
+		TqTeoL7hPOIaR1ONvBRUW8xWTcs=
 		</data>
 		<key>System.Core.dll</key>
 		<data>
-		ZSFTpfIR+EgcfSBMfmlVjWfBuxk=
+		bBjgPbviF9DBlOVLfTv0cI0haTo=
 		</data>
 		<key>System.Data.dll</key>
 		<data>
-		F9L1d40VEzZ587EF/I5Imwg0ox4=
+		XF0FKcPUqA+xvtqjqe63ZeEJs3g=
 		</data>
 		<key>System.Transactions.dll</key>
 		<data>
-		vIQWGrm00sLoxqrB1ZcGJNE5nDA=
+		AH+aXyV/ofisODZjvXInf3an/Jg=
 		</data>
 		<key>System.Xml.dll</key>
 		<data>
-		SD1l0qOfIcqueidJ2Z529XgsVtY=
+		N1R22Jx0DUHNVYxF3USIAnc4Bjo=
 		</data>
 		<key>System.dll</key>
 		<data>
-		iVPNW67ryv9ZCAsueZFYhyiAGS0=
+		GSSgWqs9tj/jJznmZ3qZFDDcjHM=
 		</data>
 		<key>bg_small.png</key>
 		<data>
@@ -175,13 +239,21 @@
 		<data>
 		QUA2+rf8xc9G7+pDpzAndmKjYCc=
 		</data>
+		<key>hadithCover_iPad.png</key>
+		<data>
+		FXjcLEHtt2o3eza48aE/oCS4NI0=
+		</data>
 		<key>monotouch.dll</key>
 		<data>
-		oQyv+sJ+DsepWtLkcZsVILchhAY=
+		GwXJtqoscA8ys/uBXUJYF34ifRU=
 		</data>
 		<key>mscorlib.dll</key>
 		<data>
-		L3jY0SLFECK3VnZ0ynSYhqSWn7o=
+		s2U1g1VnKiiosNZg390tU8WxySw=
+		</data>
+		<key>vintage_paper.jpg</key>
+		<data>
+		vRg2ziSTNZsf1TU85q5fItnmaS8=
 		</data>
 	</dict>
 	<key>rules</key>

@@ -36,7 +36,7 @@ namespace HadithBooks
 				lblEnglish.TextColor = UIColor.White;
 				Console.WriteLine (lblEnglish.Frame.Y + " " + lblEnglish.Frame.X);
 				lblEnglish.Frame = new RectangleF (16, 33, 349, 16);
-				lblArabic.Frame = new RectangleF (399, 33, 219, 16);
+				lblArabic.Frame = new RectangleF (389, 33, 219, 16);
 				lblArabic.Font = UIFont.FromName ("Helvetica-Bold", 20f);
 				lblEnglish.Font = UIFont.FromName ("Helvetica-Bold", 20f);
 			}

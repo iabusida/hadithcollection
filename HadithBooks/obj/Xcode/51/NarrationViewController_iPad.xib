@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NarrationViewController">
             <connections>
                 <outlet property="bntLanguageMode" destination="iTy-fF-uQO" id="AgU-O6-I6X"/>
+                <outlet property="detailWebView" destination="7Eo-uM-REy" id="oCh-2c-Mvz"/>
                 <outlet property="lblTitle" destination="9dY-xp-Oq2" id="DPb-kT-CU4"/>
                 <outlet property="lblTotalCount" destination="Ki8-Aa-ObW" id="1JR-dt-u14"/>
                 <outlet property="txtNarrationDetails" destination="XcY-Cy-3ji" id="qhn-N0-siv"/>
@@ -24,7 +25,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" minimumZoomScale="0.0" id="XcY-Cy-3ji">
-                    <rect key="frame" x="90" y="201" width="575" height="641"/>
+                    <rect key="frame" x="90" y="201" width="575" height="41"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.47017238451086951" green="0.32537147126625998" blue="0.24596159393459707" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -95,6 +96,11 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <webView contentMode="scaleToFill" id="7Eo-uM-REy">
+                    <rect key="frame" x="90" y="201" width="575" height="641"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </webView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>

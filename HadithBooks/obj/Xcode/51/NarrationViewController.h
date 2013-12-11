@@ -18,6 +18,7 @@
 	UIButton *_PreviousBtn;
 	UITextView *_txtNarrationDetails;
     IBOutlet UILabel *lblTotalCount;
+    IBOutlet UIWebView *detailWebView;
     IBOutlet UIImageView *bg_image;
 }
 
