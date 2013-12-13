@@ -6,6 +6,7 @@ using MonoTouch.UIKit;
 using MonoTouch.Dialog;
 using System.Drawing;
 using MonoTouch.ObjCRuntime;
+using MonoTouch.MessageUI;
 
 namespace HadithBooks
 {
@@ -32,10 +33,25 @@ namespace HadithBooks
 			// Release any cached data, images, etc that aren't in use.
 		}
 
+		partial void ContactUs (MonoTouch.Foundation.NSObject sender)
+		{
+			MFMailComposeViewController _mailController = new MFMailComposeViewController ();
+			_mailController.SetToRecipients (new string[]{"izzy.az@gmail.com"});
+			_mailController.SetSubject ("Hadith Books");
+
+			_mailController.Finished += ( object s, MFComposeResultEventArgs args) => {
+				Console.WriteLine (args.Result.ToString ());
+				args.Controller.DismissViewController (true, null);
+			};
+
+			this.PresentViewController (_mailController, true, null);
+
+		}
 		public override void ViewDidLoad ()
 		{
 		
 			base.ViewDidLoad ();
+
 
 			var window = new UIWindow (UIScreen.MainScreen.Bounds);
 			sourceTable.Source = new HadithSourceTable (this);
@@ -43,6 +59,7 @@ namespace HadithBooks
 			if (window.Frame.Height == 568) {
 				bg_image.Frame = new RectangleF (0, 0, 320, 568);
 				sourceTable.Frame = new RectangleF(35,87,251,296);
+				btnContactUs.Frame = new RectangleF (106, 490, 108, 20);
 			}
 			Add (sourceTable);
 
@@ -53,9 +70,10 @@ namespace HadithBooks
 		{
 			base.ViewDidAppear (false);
 
-			var source_id = NSUserDefaults.StandardUserDefaults.IntForKey("source_id");
-//			var book_id = NSUserDefaults.StandardUserDefaults.IntForKey("book_id");
-			if (source_id > 0) {
+			UIApplication.SharedApplication.SetStatusBarHidden (true, UIStatusBarAnimation.None);
+			var loadlast = NSUserDefaults.StandardUserDefaults.BoolForKey ("loadlast");
+			if (loadlast) {
+				var source_id = NSUserDefaults.StandardUserDefaults.IntForKey("source_id");
 				var source = HadithDataContext.Get_All_Hadith_Sources.Where(hs => hs.SourceId == source_id).FirstOrDefault();
 
 				if (source != null) {

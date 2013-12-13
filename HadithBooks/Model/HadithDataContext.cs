@@ -64,6 +64,7 @@ namespace HadithBooks
 						book.EnglishTitle = reader.GetString (1);
 						book.ArabicTitle = reader.GetString (2);
 						book.BookNumber = reader.GetInt32(3);
+						book.SourceId = sourceId;
 //						book.Narrations = GetNarrationsByBookId (book.BookNumber);
 						Booklist.Add (book);
 					

@@ -16,13 +16,24 @@ namespace HadithBooks
 		MonoTouch.UIKit.UIImageView bg_image { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UIButton btnContactUs { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIView headerView { get; set; }
 
 		[Outlet]
 		MonoTouch.UIKit.UITableView sourceTable { get; set; }
+
+		[Action ("ContactUs:")]
+		partial void ContactUs (MonoTouch.Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnContactUs != null) {
+				btnContactUs.Dispose ();
+				btnContactUs = null;
+			}
+
 			if (bg_image != null) {
 				bg_image.Dispose ();
 				bg_image = null;

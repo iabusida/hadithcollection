@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>HadithBooks</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.iabusida.HadithBooks</string>
+	<string>com.iabusida.com.iabusida.HadithBooks</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -29,13 +29,19 @@
 	</array>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>Icon</string>
-		<string>Icon@2x</string>
-		<string>Icon-60@2x</string>
-		<string>Icon-72</string>
-		<string>Icon-72@2x</string>
-		<string>Icon-76</string>
 		<string>Icon-76@2x</string>
+		<string>Icon-76</string>
+		<string>Icon-72@2x</string>
+		<string>Icon-60@2x</string>
+		<string>Icon@2x</string>
+		<string>Icon-72</string>
+		<string>Icon</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleBlackTranslucent</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UIStatusBarHidden</key>
+	<true/>
 </dict>
 </plist>

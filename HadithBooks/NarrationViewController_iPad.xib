@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NarrationViewController">
             <connections>
+                <outlet property="NextBtn" destination="UKp-ZB-ShA" id="NI5-7Y-zaG"/>
+                <outlet property="PreviousBtn" destination="OPX-5C-uU5" id="YFe-8C-Wgb"/>
                 <outlet property="bntLanguageMode" destination="iTy-fF-uQO" id="AgU-O6-I6X"/>
                 <outlet property="detailWebView" destination="7Eo-uM-REy" id="oCh-2c-Mvz"/>
                 <outlet property="lblTitle" destination="9dY-xp-Oq2" id="DPb-kT-CU4"/>

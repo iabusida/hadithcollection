@@ -39,16 +39,6 @@ namespace HadithBooks
 			// Release any cached data, images, etc that aren't in use.
 		}
 
-
-		public void RemoveCurrentLocation()
-		{
-
-			NSUserDefaults.StandardUserDefaults.SetInt (0, "source_id");
-			NSUserDefaults.StandardUserDefaults.SetInt (0, "book_id");
-			NSUserDefaults.StandardUserDefaults.SetInt (0, "narration_id");
-			NSUserDefaults.StandardUserDefaults.Synchronize();
-
-		}
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
@@ -71,12 +61,14 @@ namespace HadithBooks
 			base.ViewDidAppear (false);
 
 
-			var book_id = NSUserDefaults.StandardUserDefaults.IntForKey("source_id");
+			var loadlast = NSUserDefaults.StandardUserDefaults.BoolForKey ("loadlast");
 
-			if (book_id > 0) {
+			if (loadlast) {
+				var book_id = NSUserDefaults.StandardUserDefaults.IntForKey("book_id");
+				var bookindex = NSUserDefaults.StandardUserDefaults.IntForKey("current_book");
 				var currentBook = Books.Where (b => b.BookNumber == book_id).FirstOrDefault ();
 				if (currentBook != null) {
-					NarrationViewController narrationView = new NarrationViewController (Books,currentBook.BookNumber);
+					NarrationViewController narrationView = new NarrationViewController (Books,bookindex);
 					this.PresentViewController (narrationView, false, null);
 
 				}
@@ -85,8 +77,7 @@ namespace HadithBooks
 		}
 		partial void GoBack (MonoTouch.Foundation.NSObject sender)
 		{
-			RemoveCurrentLocation();
-			this.DismissViewController(true, null);
+			this.DismissViewController(false, null);
 		}
 
 	
