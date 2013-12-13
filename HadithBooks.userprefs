@@ -1,5 +1,5 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="AppStore|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Ad-Hoc|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
   <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="HadithBooks/Model/HadithSource.cs" Line="16" Column="1" />
@@ -11,9 +11,10 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="HadithBooks" expanded="True" selected="True">
+          <Node name="HadithBooks" expanded="True">
             <Node name="Resources" expanded="True" />
             <Node name="HadithSourcesViewController.cs" expanded="True" />
+            <Node name="Info.plist" selected="True" />
           </Node>
         </State>
       </Pad>

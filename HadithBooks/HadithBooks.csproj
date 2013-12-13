@@ -73,6 +73,7 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <IpaPackageName>
     </IpaPackageName>
+    <BuildIpa>true</BuildIpa>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <DebugType>full</DebugType>
