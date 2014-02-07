@@ -19,7 +19,7 @@ namespace HadithBooks
 		MonoTouch.UIKit.UIButton bntLanguageMode { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIWebView detailWebView { get; set; }
+		MonoTouch.UIKit.UITextView detailView { get; set; }
 
 		[Outlet]
 		MonoTouch.UIKit.UILabel lblBookName { get; set; }
@@ -56,14 +56,9 @@ namespace HadithBooks
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (lblTotalCount != null) {
-				lblTotalCount.Dispose ();
-				lblTotalCount = null;
-			}
-
-			if (detailWebView != null) {
-				detailWebView.Dispose ();
-				detailWebView = null;
+			if (detailView != null) {
+				detailView.Dispose ();
+				detailView = null;
 			}
 
 			if (bg_image != null) {
@@ -89,6 +84,11 @@ namespace HadithBooks
 			if (lblTitleArabic != null) {
 				lblTitleArabic.Dispose ();
 				lblTitleArabic = null;
+			}
+
+			if (lblTotalCount != null) {
+				lblTotalCount.Dispose ();
+				lblTotalCount = null;
 			}
 
 			if (NextBtn != null) {

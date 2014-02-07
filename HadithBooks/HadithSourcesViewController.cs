@@ -72,6 +72,15 @@ namespace HadithBooks
 
 			UIApplication.SharedApplication.SetStatusBarHidden (true, UIStatusBarAnimation.None);
 			var loadlast = NSUserDefaults.StandardUserDefaults.BoolForKey ("loadlast");
+
+			var fontsize = NSUserDefaults.StandardUserDefaults.FloatForKey("fontsize");
+
+			if (fontsize == 0) {
+				NSUserDefaults.StandardUserDefaults.SetFloat(18f, "fontsize");
+				NSUserDefaults.StandardUserDefaults.Synchronize ();
+
+			}
+
 			if (loadlast) {
 				var source_id = NSUserDefaults.StandardUserDefaults.IntForKey("source_id");
 				var source = HadithDataContext.Get_All_Hadith_Sources.Where(hs => hs.SourceId == source_id).FirstOrDefault();
@@ -109,10 +118,6 @@ namespace HadithBooks
 			{
 				var source = HadithDataContext.Get_All_Hadith_Sources.ElementAt (indexPath.Row);
 				BooksViewController booksView = new BooksViewController (source.EnglishTitle, source.ArabicTitle, source.SourceId);
-
-
-				//window.RootViewController = new HadithSourcesViewController ();
-//				booksView.ModalTransitionStyle = UIModalTransitionStyle.;
 				this.parentController.PresentViewController (booksView, false, null);
 			}
 

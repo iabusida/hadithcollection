@@ -2,7 +2,7 @@ using System;
 using Mono.Data.Sqlite;
 using System.Data;
 using System.Collections.Generic;
-
+using System.Linq;
 namespace HadithBooks
 {
 	public static class HadithDataContext
@@ -47,13 +47,41 @@ namespace HadithBooks
 
 		}
 
+		public static Book GetBookById (int sourceId, int bookId)
+		{
+			Book book = null;
+
+			dbcon.Open ();
+			IDbCommand dbcmd = dbcon.CreateCommand ();
+			dbcmd.CommandText = "SELECT * from books where BookId = " + bookId + " and  HadithSourceId = " + sourceId;
+
+			IDataReader reader = dbcmd.ExecuteReader ();
+			while (reader.Read ()) {
+				try {
+
+					book = new Book ();
+					book.BookId = reader.GetInt32 (0);
+					book.EnglishTitle = reader.GetString (1);
+					book.ArabicTitle = reader.GetString (2);
+					book.BookNumber = reader.GetInt32(3);
+					book.SourceId = reader.GetInt32(4);
+				} catch (Exception ex) {
+					Console.WriteLine (ex.Message);
+				}
+			}
+			reader.Close ();
+			dbcmd.Dispose ();
+			dbcon.Close ();
+			return book;
+		}
+
 		public static List<Book> GetBooksBySourceId (int sourceId)
 		{
 			List<Book> Booklist = new List<Book> ();
 
 			dbcon.Open ();
 			IDbCommand dbcmd = dbcon.CreateCommand ();
-			dbcmd.CommandText = "SELECT * from books where HadithSource_SourceId = " + sourceId;
+			dbcmd.CommandText = "SELECT * from books where HadithSourceId = " + sourceId;
 
 			IDataReader reader = dbcmd.ExecuteReader ();
 			while (reader.Read ()) {
@@ -79,7 +107,7 @@ namespace HadithBooks
 			return Booklist;
 		}
 	
-		public static List<Narration> GetNarrationsByBookId (int chapterId)
+		public static Narration GetNarrationByBookId (int SourceId, int BookId, int narrationId)
 		{
 
 			dbcon.Open ();
@@ -87,7 +115,7 @@ namespace HadithBooks
 
 
 			IDbCommand dbcmd = dbcon.CreateCommand ();
-			dbcmd.CommandText = "SELECT * from narrations where book_bookId =" + chapterId;
+			dbcmd.CommandText = String.Format("SELECT * from narrations where bookId = {0} and hadithsourceId = {1}" , BookId, SourceId);
 			IDataReader reader = dbcmd.ExecuteReader ();
 			while (reader.Read ()) {
 				Narration narration = new Narration ();
@@ -102,38 +130,27 @@ namespace HadithBooks
 			reader.Close ();
 			dbcmd.Dispose ();
 			dbcon.Close ();
-			return narrationList;
+			return narrationId > 0 ? narrationList [narrationId] : narrationList.FirstOrDefault ();
+		}
+
+		public static int GetNarrationCount(int SourceId, int BookId)
+		{
+
+			dbcon.Open ();
+			int narrationCount = 0;
+			IDbCommand dbcmd = dbcon.CreateCommand ();
+				dbcmd.CommandText = String.Format("SELECT count(*) as count from narrations where bookId = {0} and hadithsourceId = {1}" , BookId, SourceId);
+			IDataReader reader = dbcmd.ExecuteReader ();
+			while (reader.Read ()) {
+
+				narrationCount = reader.GetInt32 (0);
+				
+			}
+			reader.Close ();
+			dbcmd.Dispose ();
+			dbcon.Close ();
+
+				return narrationCount;
 		}
 	}
 }
-//			lblName.Text = "hello world";
-//
-//			string connectionString = "URI=file:hadith.db";
-//			IDbConnection dbcon;
-//			dbcon = (IDbConnection) new SqliteConnection(connectionString);
-//			dbcon.Open();
-//			IDbCommand dbcmd = dbcon.CreateCommand();
-//			// requires a table to be created named employee
-//			// with columns firstname and lastname
-//			// such as,
-//			//        CREATE TABLE employee (
-//			//           firstname varchar(32),
-//			//           lastname varchar(32));
-//			string sql ="SELECT * from HadithSources";
-//			dbcmd.CommandText = sql;
-//			IDataReader reader = dbcmd.ExecuteReader();
-//			while(reader.Read()) {
-//				string FirstName = reader.GetString (1);
-//				Console.WriteLine("Name: " +
-//					FirstName);
-//				lblName.Text = FirstName;
-//				break;
-//			}
-//			// clean up
-//			reader.Close();
-//			reader = null;
-//			dbcmd.Dispose();
-//			dbcmd = null;
-//			dbcon.Close();
-//			dbcon = null;
-//	

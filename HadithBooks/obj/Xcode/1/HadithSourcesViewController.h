@@ -11,14 +11,19 @@
 
 @interface HadithSourcesViewController : UIViewController {
 	UIImageView *_bg_image;
+	UIButton *_btnContactUs;
 	UIView *_headerView;
 	UITableView *_sourceTable;
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *bg_image;
 
+@property (nonatomic, retain) IBOutlet UIButton *btnContactUs;
+
 @property (nonatomic, retain) IBOutlet UIView *headerView;
 
 @property (nonatomic, retain) IBOutlet UITableView *sourceTable;
+
+- (IBAction)ContactUs:(id)sender;
 
 @end

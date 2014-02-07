@@ -1,24 +1,27 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Ad-Hoc|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina4.7.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../Downloads/PageTurn/PageTurn/PageTurnViewController.cs">
     <Files>
-      <File FileName="HadithBooks/Model/HadithSource.cs" Line="16" Column="1" />
+      <File FileName="HadithBooks/Model/HadithSource.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/Info.plist" />
-      <File FileName="HadithBooks/HadithSourcesViewController.cs" Line="62" Column="49" />
-      <File FileName="HadithBooks/NarrationViewController.cs" Line="128" Column="4" />
+      <File FileName="HadithBooks/HadithSourcesViewController.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/NarrationViewController.cs" Line="185" Column="4" />
       <File FileName="HadithBooks/HadithSourcesViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks.Android/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/Model/HadithDataContext.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/Model/Narration.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/HadithBookCell.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/BooksViewController.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/PageTurnViewController.cs" Line="177" Column="1" />
+      <File FileName="HadithBooks/PageTurnViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/BookPageController.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/BookPageViewController.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/BookPageViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="../../../Downloads/PageTurn/PageTurn/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/NarrationViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="../../../Downloads/PageTurn/PageTurn/PageTurnViewController.cs" Line="121" Column="94" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="HadithBooks" expanded="True">
-            <Node name="Resources" expanded="True" />
-            <Node name="HadithSourcesViewController.cs" expanded="True" />
-            <Node name="Info.plist" selected="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

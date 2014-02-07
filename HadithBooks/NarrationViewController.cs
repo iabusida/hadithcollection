@@ -11,34 +11,40 @@ namespace HadithBooks
 {
 	public partial class NarrationViewController : UIViewController
 	{
-		private List<Narration> NarrationList = null;
-		private List<Book> HadithBooks = null;
-		private int CurrentBook;
-		private int CurrentNarration { get; set; }
+
+
+		public int BookId { get; set; }
+		public int SourceId { get; set; }
+		public Narration NarrationList = null;
+		public Book HadithBook = null;
+		public int NarrationCount { get; set; }
+		private PageTurnViewController controller { get; set; }
+		public int CurrentNarrationIndex { get; set; }
+
 		private string show_in_arabic_key = "show_in_arabic_narration";
 		private string DetailViewDiv = null;
-
 		static bool UserInterfaceIdiomIsPhone {
 			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
 		}
-		public NarrationViewController () : base (UserInterfaceIdiomIsPhone ? "NarrationViewController_iPhone" : "NarrationViewController_iPad", null)
+	
+		public NarrationViewController (string nibName, NSBundle bundle) : base (nibName, bundle)
 		{
 		}
-
-		public NarrationViewController (List<Book> books, int selectedBook) : base (UserInterfaceIdiomIsPhone ? "NarrationViewController_iPhone" : "NarrationViewController_iPad", null)
+		public NarrationViewController (PageTurnViewController controller, int sourceId, int bookId, int narrationIndex) : base (UserInterfaceIdiomIsPhone ? "NarrationViewController_iPhone" : "NarrationViewController_iPad", null)
 		{
 
-			this.HadithBooks = books;
-			NarrationList = new List<Narration> ();
-			CurrentBook = selectedBook;
-			CurrentNarration = 0;
-			NarrationList = HadithDataContext.GetNarrationsByBookId (this.HadithBooks [selectedBook].BookNumber);
+			this.controller = controller;
+			this.HadithBook = HadithDataContext.GetBookById (sourceId, bookId);
+//			NarrationList = new List<Narration> ();
+//			CurrentBook = selectedBook;
+			CurrentNarrationIndex = narrationIndex;
+			BookId = bookId;
+			this.SourceId = sourceId;
+			NarrationCount = HadithDataContext.GetNarrationCount (sourceId, bookId);
+			NarrationList = HadithDataContext.GetNarrationByBookId (sourceId, bookId, CurrentNarrationIndex);
 
-			var narration_id = NSUserDefaults.StandardUserDefaults.IntForKey("narration_id");
-			var loadlast = NSUserDefaults.StandardUserDefaults.BoolForKey ("loadlast");
-			if (loadlast) {
-				CurrentNarration = narration_id;
-			}
+
+
 
 		}
 
@@ -52,55 +58,72 @@ namespace HadithBooks
 
 		partial void GoBack (MonoTouch.Foundation.NSObject sender)
 		{
-			RemoveCurrentLocation();
-			this.DismissViewController(false, null);
+
+			this.controller.BackClick();
+			//PageTurnViewControlle
+//			NSUserDefaults.StandardUserDefaults.SetBool (false, "loadlast");
+//			NSUserDefaults.StandardUserDefaults.Synchronize();
+
+//			this.DismissViewController(false, null);
 		}
 
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+		
 
-			if (UserInterfaceIdiomIsPhone) {
+			UIPinchGestureRecognizer pinchRecognizer = new UIPinchGestureRecognizer ();
 
-				DetailViewDiv = "<div style=\"padding-right: 15px;text-align:justify;font-size: 18px;color:white;\"><span class=\"saws\"></span>{0}</div>";
+			// wire up the handler
+			pinchRecognizer.AddTarget(() => { HandlePinch(pinchRecognizer); });
 
-			} else {
-
-				DetailViewDiv = "<div style=\"padding-right: 15px;text-align:justify;font-size: 30px;color:white;\">{0}</div>";
-			}
-			detailWebView.Opaque = false;
+			// add the gesture recognizer to the text view
+			detailView.AddGestureRecognizer (pinchRecognizer);
+		
 			var window = new UIWindow (UIScreen.MainScreen.Bounds);
 
 			if (window.Frame.Height == 568) {
-				bg_image.Frame = new RectangleF (0, 0, 320, 568);
-				NextBtn.Frame = new RectangleF(201, 484, 58, 29);
-				PreviousBtn.Frame = new RectangleF (56,485,85,28);
-				lblTotalCount.Frame = new RectangleF(175,455,100,21);
-//				txtNarrationDetails.Frame = new RectangleF(28,90,257,357);
+				bg_image.Frame = new RectangleF (0, 59, 320, 509);
+//				NextBtn.Frame = new RectangleF(201, 484, 58, 29);
+//				PreviousBtn.Frame = new RectangleF (56,485,85,28);
+//				lblTotalCount.Frame = new RectangleF(175,455,100,21);
+				//	txtNarrationDetails.Frame = new RectangleF(28,90,257,357);
 			}
 
 			if (!UserInterfaceIdiomIsPhone) {
 
 			}
-			if (NarrationList.Count () > 0) {
+			if (NarrationList != null) {
 				updateScreen ();
 			}
-			// Perform any additional setup after loading the view, typically from a nib.
+
 		}
 
-		partial void PreviousNarration (MonoTouch.Foundation.NSObject sender)
+		public void PreviousNarration ()
 		{
 
-			if (CurrentNarration == 0) {
-				if (CurrentBook > 0) {
+			if (CurrentNarrationIndex == 0) {
+//				if (CurrentBook > 0) {
 					LoadPreviousBook ();
-				}
+//				}
 			} 
 			else 
 			{
-				CurrentNarration -= 1;
+				CurrentNarrationIndex -= 1;
 				updateScreen();
 			}
+		}
+
+
+		partial void NextNarration (MonoTouch.Foundation.NSObject sender)
+		{
+			this.controller.NextPage();
+		}
+
+
+		partial void PreviousNarration (MonoTouch.Foundation.NSObject sender)
+		{
+			this.controller.PreviousPage();
 		}
 
 		partial void btnLanguage (MonoTouch.Foundation.NSObject sender)
@@ -118,7 +141,6 @@ namespace HadithBooks
 			NSUserDefaults.StandardUserDefaults.SetBool (true, "loadlast");
 			NSUserDefaults.StandardUserDefaults.SetInt (source_id, "source_id");
 			NSUserDefaults.StandardUserDefaults.SetInt (book_id, "book_id");
-			NSUserDefaults.StandardUserDefaults.SetInt (CurrentBook, "current_book");
 			NSUserDefaults.StandardUserDefaults.SetInt (narration_id, "narration_id");
 			NSUserDefaults.StandardUserDefaults.Synchronize();
 
@@ -130,77 +152,96 @@ namespace HadithBooks
 			NSUserDefaults.StandardUserDefaults.Synchronize();
 
 		}
-		private void updateScreen()
+
+		int NarrationIndex {
+			get;
+			set;
+		}
+
+		public void updateScreen()
 		{
 
-			string contentDirectoryPath = Path.Combine (NSBundle.MainBundle.BundlePath, "Content/");
+			var firstAttributes = new UIStringAttributes {
+				ForegroundColor = UIColor.White,
+				Font = UIFont.FromName("Helvetica Neue", NSUserDefaults.StandardUserDefaults.FloatForKey("fontsize")),
+				BaselineOffset =  5
 
-
-			PreviousBtn.Hidden = CurrentBook == 0 && CurrentNarration == 0;
-			
+			};
 
 			if (NSUserDefaults.StandardUserDefaults.BoolForKey(show_in_arabic_key)) 
 			{
 
-				detailWebView.LoadHtmlString(String.Format(DetailViewDiv,NarrationList [CurrentNarration].ArabicDetails), new NSUrl(contentDirectoryPath, true));
-				lblTitle.Text = this.HadithBooks [CurrentBook].ArabicTitle;
+				var narrationText = NarrationList.ArabicDetails.Replace("\n", "");
+				lblTitle.Text = this.HadithBook.ArabicTitle;
+				detailView.AttributedText =  new NSAttributedString(narrationText, firstAttributes);
+				detailView.TextAlignment = UITextAlignment.Right;
 				bntLanguageMode.SetTitle ("Show in English", UIControlState.Normal);
 
 			} 
 			else
 			{
-				var imagePath = NSBundle.MainBundle.PathForResource ("sallallahu_alaihi_wa_sallam", "png");
-				var imgHTMLTag = string.Format("<span style=\"background-image:url('file://{0}');background-size: {1};background-position: 50% 50%;background-repeat: no-repeat;display: inline;height: 0px;width: 0px;padding: 0 7.5px 0 7.5px;\"></span>", imagePath, UserInterfaceIdiomIsPhone ? "15px 15px" : "25px 25px");
-				detailWebView.LoadHtmlString(String.Format(DetailViewDiv,NarrationList [CurrentNarration].EnglishDetails.Replace("()", string.Format("({0})", imgHTMLTag))), new NSUrl(contentDirectoryPath, true));
-				lblTitle.Text = this.HadithBooks [CurrentBook].EnglishTitle;
+
+				RegexOptions options = RegexOptions.None;
+				Regex regex = new Regex(@"\s+", options);     
+				var narrationText = NarrationList.EnglishDetails.Replace ("()", "(ﷺ)").Replace("\n", "");
+				narrationText = regex.Replace(narrationText, @" ");
+				detailView.AttributedText =  new NSAttributedString(narrationText, firstAttributes);
+				detailView.TextAlignment = UITextAlignment.Left;
+				lblTitle.Text = this.HadithBook.EnglishTitle;
 				bntLanguageMode.SetTitle ("تظهر باللغة العربية", UIControlState.Normal);
 
 			}
-			saveCurrentLocation (this.HadithBooks [CurrentBook].SourceId, this.HadithBooks [CurrentBook].BookNumber, CurrentNarration);
-			lblTotalCount.Text = String.Format ("{0}/{1}", CurrentNarration + 1, NarrationList.Count ());
+			saveCurrentLocation (this.SourceId, this.BookId, CurrentNarrationIndex);
+			this.NarrationIndex = CurrentNarrationIndex;
+			lblTotalCount.Text = String.Format ("{0}/{1}", CurrentNarrationIndex + 1, NarrationCount);
 
 		}
 
-		partial void NextNarration (MonoTouch.Foundation.NSObject sender)
+		public void NextNarration ()
 		{
 
-			if (CurrentNarration < NarrationList.Count () - 1) {
-				CurrentNarration += 1;
+			if (CurrentNarrationIndex <  NarrationCount - 1) {
+				CurrentNarrationIndex += 1;
 				updateScreen();
 
 			} else {
 				//TODO add code to handle next chapter
 
-				if (CurrentBook == this.HadithBooks.Count () - 1) {
-					new UIAlertView ("End", "End of Book", null, "OK", null).Show ();
-				} else {
-
+//				if (CurrentBook == this.HadithBooks.Count () - 1) {
+//					new UIAlertView ("End", "End of Book", null, "OK", null).Show ();
+//				} else {
+//
 					LoadNextBook ();
-				}
+//				}
 			
 			}
 
 		}
 
-		private void LoadPreviousBook ()
+		protected void HandlePinch(UIPinchGestureRecognizer pinchRecognizer)
 		{
+			if (pinchRecognizer.State == UIGestureRecognizerState.Changed) {
 
-			CurrentBook -= 1;
-			NarrationList = new List<Narration> ();
-			NarrationList = HadithDataContext.GetNarrationsByBookId (this.HadithBooks [CurrentBook].BookNumber);
-			CurrentNarration = NarrationList.Count() - 1;
-			updateScreen ();
+				// set your new font value on the text view
 
+				float fontsize = 15.0f * pinchRecognizer.Scale;
+				detailView.Font = UIFont.FromName ("Arial", fontsize );
+
+				NSUserDefaults.StandardUserDefaults.SetFloat(fontsize, "fontsize");
+				NSUserDefaults.StandardUserDefaults.Synchronize ();
+			}
 		}
-		private void LoadNextBook ()
+
+		public void LoadPreviousBook ()
 		{
-
-			CurrentBook += 1;
-			CurrentNarration = 0;
-			NarrationList = HadithDataContext.GetNarrationsByBookId (this.HadithBooks [CurrentBook].BookNumber);
-			updateScreen ();
-
+			CurrentNarrationIndex =  HadithDataContext.GetNarrationCount(SourceId, BookId - 1) - 1;
+			this.BookId -= 1;
 		}
+		public void LoadNextBook ()
+		{
+			CurrentNarrationIndex = 0;
+			this.BookId += 1;
+		}
+	
 	}
 }
-

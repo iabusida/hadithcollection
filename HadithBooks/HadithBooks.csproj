@@ -84,7 +84,6 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignProvision>75AC2BB6-3709-45A1-9224-71A1153685BD</CodesignProvision>
     <CodesignKey>iPhone Distribution: Islam Abusida (P9666P87BB)</CodesignKey>
     <IpaPackageName>
     </IpaPackageName>
@@ -126,11 +125,12 @@
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\Default-Portrait.png" />
     <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\page_cover_iPad.png" />
+    <BundleResource Include="Resources\page_cover_iPhone.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
-    <None Include="Assets\FlyoutNavigation.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -157,6 +157,12 @@
     <Compile Include="Book.cs">
       <DependentUpon>Info.plist</DependentUpon>
     </Compile>
+    <Compile Include="PageTurnViewController.cs" />
+    <Compile Include="PageTurnViewController.designer.cs" />
+    <Compile Include="BookPageViewController.cs" />
+    <Compile Include="BookPageViewController.designer.cs">
+      <DependentUpon>BookPageViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="HadithBookCell.xib" />
@@ -167,11 +173,13 @@
     <InterfaceDefinition Include="NarrationViewController_iPhone.xib" />
     <InterfaceDefinition Include="NarrationViewController_iPad.xib" />
     <InterfaceDefinition Include="HadithBookCell_iPad.xib" />
+    <InterfaceDefinition Include="PageTurnViewController.xib" />
+    <InterfaceDefinition Include="Resources\BookPageViewController_iPad.xib" />
+    <InterfaceDefinition Include="Resources\BookPageViewController_iPhone.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="hadith.db" />

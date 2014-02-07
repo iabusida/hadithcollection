@@ -10,7 +10,11 @@
 @implementation HadithSourcesViewController
 
 @synthesize bg_image = _bg_image;
+@synthesize btnContactUs = _btnContactUs;
 @synthesize headerView = _headerView;
 @synthesize sourceTable = _sourceTable;
+
+- (IBAction)ContactUs:(id)sender {
+}
 
 @end
