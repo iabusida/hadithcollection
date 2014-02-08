@@ -20,9 +20,8 @@ namespace HadithBooks
 		public int NarrationCount { get; set; }
 		private PageTurnViewController controller { get; set; }
 		public int CurrentNarrationIndex { get; set; }
-
 		private string show_in_arabic_key = "show_in_arabic_narration";
-		private string DetailViewDiv = null;
+
 		static bool UserInterfaceIdiomIsPhone {
 			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
 		}
@@ -157,43 +156,51 @@ namespace HadithBooks
 			get;
 			set;
 		}
+		public bool PreviousButtonHidden
+		{
+			get{
+				return PreviousBtn.Hidden;
+			}
+		}
 
 		public void updateScreen()
 		{
 
-			var firstAttributes = new UIStringAttributes {
+			var detailViewAttributes = new UIStringAttributes {
 				ForegroundColor = UIColor.White,
 				Font = UIFont.FromName("Helvetica Neue", NSUserDefaults.StandardUserDefaults.FloatForKey("fontsize")),
 				BaselineOffset =  5
 
 			};
 
-			if (NSUserDefaults.StandardUserDefaults.BoolForKey(show_in_arabic_key)) 
-			{
+			PreviousBtn.Hidden = HadithDataContext.GetPreviousBookNarrationCount (SourceId, BookId - 1) == 0 && CurrentNarrationIndex == 0;
 
-				var narrationText = NarrationList.ArabicDetails.Replace("\n", "");
-				lblTitle.Text = this.HadithBook.ArabicTitle;
-				detailView.AttributedText =  new NSAttributedString(narrationText, firstAttributes);
-				detailView.TextAlignment = UITextAlignment.Right;
-				bntLanguageMode.SetTitle ("Show in English", UIControlState.Normal);
+			if (NarrationList != null) {
 
-			} 
-			else
-			{
+				if (NSUserDefaults.StandardUserDefaults.BoolForKey (show_in_arabic_key)) {
 
-				RegexOptions options = RegexOptions.None;
-				Regex regex = new Regex(@"\s+", options);     
-				var narrationText = NarrationList.EnglishDetails.Replace ("()", "(ﷺ)").Replace("\n", "");
-				narrationText = regex.Replace(narrationText, @" ");
-				detailView.AttributedText =  new NSAttributedString(narrationText, firstAttributes);
-				detailView.TextAlignment = UITextAlignment.Left;
-				lblTitle.Text = this.HadithBook.EnglishTitle;
-				bntLanguageMode.SetTitle ("تظهر باللغة العربية", UIControlState.Normal);
+					var narrationText = NarrationList.ArabicDetails.Replace ("\n", "");
+					lblTitle.Text = this.HadithBook.ArabicTitle;
+					detailView.AttributedText = new NSAttributedString (narrationText, detailViewAttributes);
+					detailView.TextAlignment = UITextAlignment.Right;
+					bntLanguageMode.SetTitle ("Show in English", UIControlState.Normal);
 
+				} else {
+
+					RegexOptions options = RegexOptions.None;
+					Regex regex = new Regex (@"\s+", options);     
+					var narrationText = NarrationList.EnglishDetails.Replace ("()", "(ﷺ)").Replace ("\n", "");
+					narrationText = regex.Replace (narrationText, @" ");
+					detailView.AttributedText = new NSAttributedString (narrationText, detailViewAttributes);
+					detailView.TextAlignment = UITextAlignment.Left;
+					lblTitle.Text = this.HadithBook.EnglishTitle;
+					bntLanguageMode.SetTitle ("تظهر باللغة العربية", UIControlState.Normal);
+
+				}
+				saveCurrentLocation (this.SourceId, this.BookId, CurrentNarrationIndex);
+				this.NarrationIndex = CurrentNarrationIndex;
+				lblTotalCount.Text = String.Format ("{0}/{1}", CurrentNarrationIndex + 1, NarrationCount);
 			}
-			saveCurrentLocation (this.SourceId, this.BookId, CurrentNarrationIndex);
-			this.NarrationIndex = CurrentNarrationIndex;
-			lblTotalCount.Text = String.Format ("{0}/{1}", CurrentNarrationIndex + 1, NarrationCount);
 
 		}
 
@@ -229,7 +236,26 @@ namespace HadithBooks
 
 				NSUserDefaults.StandardUserDefaults.SetFloat(fontsize, "fontsize");
 				NSUserDefaults.StandardUserDefaults.Synchronize ();
+
+
+				var firstAttributes = new UIStringAttributes {
+					ForegroundColor = UIColor.White,
+					Font = UIFont.FromName("Helvetica Neue", NSUserDefaults.StandardUserDefaults.FloatForKey("fontsize")),
+					BaselineOffset =  5
+
+				};
+
+				detailView.AttributedText = new NSAttributedString (detailView.Text, firstAttributes);
+					if (NSUserDefaults.StandardUserDefaults.BoolForKey (show_in_arabic_key)) {
+						detailView.TextAlignment = UITextAlignment.Right;
+
+					} else 
+					{
+						detailView.TextAlignment = UITextAlignment.Left;
+
+					}
 			}
+		
 		}
 
 		public void LoadPreviousBook ()

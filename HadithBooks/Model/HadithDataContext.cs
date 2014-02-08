@@ -10,6 +10,9 @@ namespace HadithBooks
 		private const string connectionString = "URI=file:hadith.db";
 		private static IDbConnection dbcon = null;
 		private static List<HadithSource> sources = null;
+		private static int CachedSourceId { get; set;}
+		private static int CachedBookId { get; set; }
+		private static List<Narration> narrationList = null;
 
 		static HadithDataContext ()
 		{
@@ -110,45 +113,80 @@ namespace HadithBooks
 		public static Narration GetNarrationByBookId (int SourceId, int BookId, int narrationId)
 		{
 
-			dbcon.Open ();
-			List<Narration> narrationList = new List<Narration> ();
 
 
-			IDbCommand dbcmd = dbcon.CreateCommand ();
-			dbcmd.CommandText = String.Format("SELECT * from narrations where bookId = {0} and hadithsourceId = {1}" , BookId, SourceId);
-			IDataReader reader = dbcmd.ExecuteReader ();
-			while (reader.Read ()) {
-				Narration narration = new Narration ();
-				narration.NarrationId = reader.GetInt32 (0);
-				narration.EnglishNarrator = !reader.IsDBNull (1) ? reader.GetString (1) : null;
-				narration.EnglishDetails = reader.GetString (2);
-				narration.ArabicDetails = reader.GetString (3);
-				//	narration.Number = reader.GetInt32 (4);
-//				narration.ChapterId = reader.GetInt32 (5);
-				narrationList.Add (narration);
+			if (narrationList == null) {
+				narrationList = new List<Narration>();
 			}
-			reader.Close ();
-			dbcmd.Dispose ();
-			dbcon.Close ();
-			return narrationId > 0 ? narrationList [narrationId] : narrationList.FirstOrDefault ();
+
+			if (CachedSourceId != SourceId || CachedBookId != BookId) {
+				dbcon.Open ();
+				narrationList = new List<Narration> ();
+				CachedSourceId = SourceId;
+				CachedBookId = BookId;
+				IDbCommand dbcmd = dbcon.CreateCommand ();
+				dbcmd.CommandText = String.Format ("SELECT * from narrations where bookId = {0} and hadithsourceId = {1}", BookId, SourceId);
+				IDataReader reader = dbcmd.ExecuteReader ();
+				while (reader.Read ()) {
+					Narration narration = new Narration ();
+					narration.NarrationId = reader.GetInt32 (0);
+					narration.EnglishNarrator = !reader.IsDBNull (1) ? reader.GetString (1) : null;
+					narration.EnglishDetails = reader.GetString (2);
+					narration.ArabicDetails = reader.GetString (3);
+					narrationList.Add (narration);
+				}
+				reader.Close ();
+				dbcmd.Dispose ();
+				dbcon.Close ();
+			}
+			if (narrationList.Count () >= narrationId - 1) {
+			
+				return narrationId > 0 ? narrationList [narrationId - 1] : narrationList.FirstOrDefault ();
+			} else {
+				return narrationList.FirstOrDefault();
+			}
 		}
 
-		public static int GetNarrationCount(int SourceId, int BookId)
+
+		private static int previousNarrationCount = -1;
+		private static int previousCachedSourceId { get; set; }
+		private static int previousCachedBookId { get; set;}
+		public static int GetPreviousBookNarrationCount(int SourceId, int BookId)
 		{
 
-			dbcon.Open ();
-			int narrationCount = 0;
-			IDbCommand dbcmd = dbcon.CreateCommand ();
-				dbcmd.CommandText = String.Format("SELECT count(*) as count from narrations where bookId = {0} and hadithsourceId = {1}" , BookId, SourceId);
-			IDataReader reader = dbcmd.ExecuteReader ();
-			while (reader.Read ()) {
+			if (previousCachedSourceId != SourceId || previousCachedBookId != BookId) {
+				previousCachedSourceId = SourceId;
+				previousCachedBookId = BookId;
+				dbcon.Open ();
+				IDbCommand dbcmd = dbcon.CreateCommand ();
+				dbcmd.CommandText = String.Format ("SELECT count(*) as count from narrations where bookId = {0} and hadithsourceId = {1}", BookId, SourceId);
+				IDataReader reader = dbcmd.ExecuteReader ();
+				while (reader.Read ()) {
 
-				narrationCount = reader.GetInt32 (0);
-				
+					previousNarrationCount = reader.GetInt32 (0);
+
+				}
+				reader.Close ();
+				dbcmd.Dispose ();
+				dbcon.Close ();
 			}
-			reader.Close ();
-			dbcmd.Dispose ();
-			dbcon.Close ();
+			return previousNarrationCount;
+		}
+		public static int GetNarrationCount(int SourceId, int BookId)
+		{
+				dbcon.Open ();
+				int narrationCount = 0;
+				IDbCommand dbcmd = dbcon.CreateCommand ();
+				dbcmd.CommandText = String.Format ("SELECT count(*) as count from narrations where bookId = {0} and hadithsourceId = {1}", BookId, SourceId);
+				IDataReader reader = dbcmd.ExecuteReader ();
+				while (reader.Read ()) {
+
+					narrationCount = reader.GetInt32 (0);
+				
+				}
+				reader.Close ();
+				dbcmd.Dispose ();
+				dbcon.Close ();
 
 				return narrationCount;
 		}

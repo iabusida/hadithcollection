@@ -128,7 +128,9 @@ namespace HadithBooks
 			{
 
 				var currentNarration = referenceViewController as NarrationViewController;
-
+				if (currentNarration.PreviousButtonHidden) {
+					return null;
+				}
 
 				currentNarration.PreviousNarration ();
 				return new NarrationViewController (parentController, currentNarration.SourceId, currentNarration.BookId, currentNarration.CurrentNarrationIndex);

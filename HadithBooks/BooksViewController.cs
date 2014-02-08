@@ -67,7 +67,6 @@ namespace HadithBooks
 
 			if (loadlast) {
 				var book_id = NSUserDefaults.StandardUserDefaults.IntForKey("book_id");
-				var bookindex = NSUserDefaults.StandardUserDefaults.IntForKey("current_book");
 				var currentBook = Books.Where (b => b.BookId == book_id).FirstOrDefault ();
 				if (currentBook != null) {
 
@@ -111,11 +110,6 @@ namespace HadithBooks
 			/// </summary>
 			public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 			{
-
-//				NarrationViewController narrationView = new NarrationViewController (this.hadithBook, indexPath.Row);
-//				narrationView.ModalTransitionStyle = UIModalTransitionStyle.CrossDissolve;
-//				this.parentController.PresentViewController (narrationView, true, null);
-
 				PageTurnViewController narrationView = new PageTurnViewController(this.hadithBook[indexPath.Row],"PageTurnViewController", null);
 //				PageTurnViewController narrationView = new PageTurnViewController (this.hadithBook, indexPath.Row);
 				narrationView.ModalTransitionStyle = UIModalTransitionStyle.CrossDissolve;

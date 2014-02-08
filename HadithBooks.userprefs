@@ -1,34 +1,42 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina4.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../Downloads/PageTurn/PageTurn/PageTurnViewController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="AppStore|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="HadithBooks/Model/HadithSource.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/Info.plist" />
       <File FileName="HadithBooks/HadithSourcesViewController.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/NarrationViewController.cs" Line="185" Column="4" />
+      <File FileName="HadithBooks/NarrationViewController.cs" Line="180" Column="1" />
       <File FileName="HadithBooks/HadithSourcesViewController.designer.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks.Android/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/Model/HadithDataContext.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/Model/HadithDataContext.cs" Line="159" Column="35" />
       <File FileName="HadithBooks/Model/Narration.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/HadithBookCell.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/BooksViewController.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/BooksViewController.cs" Line="70" Column="1" />
       <File FileName="HadithBooks/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/PageTurnViewController.cs" Line="177" Column="1" />
+      <File FileName="HadithBooks/PageTurnViewController.cs" Line="131" Column="46" />
       <File FileName="HadithBooks/PageTurnViewController.designer.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/BookPageController.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/BookPageViewController.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/BookPageViewController.designer.cs" Line="1" Column="1" />
       <File FileName="../../../Downloads/PageTurn/PageTurn/AppDelegate.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/NarrationViewController.designer.cs" Line="1" Column="1" />
-      <File FileName="../../../Downloads/PageTurn/PageTurn/PageTurnViewController.cs" Line="121" Column="94" />
+      <File FileName="../../../Downloads/PageTurn/PageTurn/PageTurnViewController.cs" Line="1" Column="1" />
+      <File FileName="HadithBooks/Main.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="HadithBooks" expanded="True">
+            <Node name="Model" expanded="True" />
+            <Node name="NarrationViewController.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.HadithBooks>
-    <IPhoneTestFlightSettings_27CAd-Hoc ApiToken="60dfdda0e8d2960dc17e3bd0741bb2ee_MTQ4MjI2NDIwMTMtMTEtMzAgMTY6NDQ6MDAuMzk1MzM0" TeamToken="e6714bb6e7b64c624b7e42ecb70f4165_MzA3Mzk2MjAxMy0xMi0wMSAxNjoyNjozNC4xMzk2MzM" ReleaseNotes="UI updates to viewing Hadith Books" NotifyTeamMembers="False" ReplaceBinaries="True" DistributionLists="" UploadDSYMs="False" />
+    <IPhoneTestFlightSettings_27CAd-Hoc ApiToken="60dfdda0e8d2960dc17e3bd0741bb2ee_MTQ4MjI2NDIwMTMtMTEtMzAgMTY6NDQ6MDAuMzk1MzM0" TeamToken="e6714bb6e7b64c624b7e42ecb70f4165_MzA3Mzk2MjAxMy0xMi0wMSAxNjoyNjozNC4xMzk2MzM" ReleaseNotes="added more features" NotifyTeamMembers="False" ReplaceBinaries="True" DistributionLists="" UploadDSYMs="False" />
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="FR56E67CGU" TeamId="P9666P87BB" />
   </MonoDevelop.Ide.ItemProperties.HadithBooks>
 </Properties>

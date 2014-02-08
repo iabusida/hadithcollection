@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NarrationViewController">
             <connections>
+                <outlet property="PreviousBtn" destination="rgM-AX-uR7" id="tLO-ed-qHC"/>
                 <outlet property="bg_image" destination="ThT-uI-VCn" id="GXo-jU-G6g"/>
                 <outlet property="bntLanguageMode" destination="ANj-9l-Nhm" id="hos-lY-J4U"/>
                 <outlet property="detailView" destination="9ZS-7T-QCj" id="VOq-HB-KUg"/>
@@ -16,7 +17,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="1">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page_cover_iPhone.png" id="ThT-uI-VCn">
@@ -115,6 +116,7 @@
             </subviews>
             <color key="backgroundColor" red="0.48627454042434692" green="0.30980393290519714" blue="0.24313727021217346" alpha="1" colorSpace="deviceRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
         <pinchGestureRecognizer id="YhT-na-bHH"/>
     </objects>

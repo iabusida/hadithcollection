@@ -6,15 +6,23 @@
 	<dict>
 		<key>.DS_Store</key>
 		<data>
-		3y++sUAKzaCQmjLBz2v0kvESHgc=
+		ZaWepWzlEppeafMD++QffXi+Bmo=
+		</data>
+		<key>BookPageViewController_iPad.nib</key>
+		<data>
+		F8tfj9P0Ypy1xerFW4XRcaOFlTk=
+		</data>
+		<key>BookPageViewController_iPhone.nib</key>
+		<data>
+		E0FxxHWiMibwAwZWT2pMZwEull8=
 		</data>
 		<key>BooksViewController_iPad.nib</key>
 		<data>
-		PSGm09E14Ttoyes3DiulyH/Unpc=
+		QW+3hQG+0RjZ80wVXuXqC+/x3fU=
 		</data>
 		<key>BooksViewController_iPhone.nib</key>
 		<data>
-		3wqFNS2DtvvaKzjNJLI3wOp/9nA=
+		GjMFvmH7/AhzM02MqGZkoVwGeSA=
 		</data>
 		<key>Default-568h@2x.png</key>
 		<data>
@@ -38,23 +46,23 @@
 		</data>
 		<key>HadithBookCell.nib</key>
 		<data>
-		d2miRQ3s08jpCUW3p2/SyHHJjhE=
+		ZYBXY/ag0MEgAdcZLHJ8fd5SpTA=
 		</data>
 		<key>HadithBookCell_iPad.nib</key>
 		<data>
-		uiO5W0zgPLmZkSbjLVWS8ylADLc=
+		fxhcpz+841bM1CpAEBPtZmKCg5o=
 		</data>
 		<key>HadithBooks.exe</key>
 		<data>
-		8bB1qupPBxJhDg3Je8Vs36W3VKM=
+		WJv5tURj05BEG+G9JRniarGz7uI=
 		</data>
 		<key>HadithSourcesViewController_iPad.nib</key>
 		<data>
-		BFETY5saD9LdGkfWNhTXQDY4+6I=
+		5sRvsqyXsC5/xRb8m7YJOEw6NXw=
 		</data>
 		<key>HadithSourcesViewController_iPhone.nib</key>
 		<data>
-		txjNPWhJ6wHquYx6fApkF0efNWU=
+		82j9hov15Nh2QphO9gDrTtaURIE=
 		</data>
 		<key>Icon-60@2x.png</key>
 		<data>
@@ -86,7 +94,7 @@
 		</data>
 		<key>Mono.Data.Sqlite.dll</key>
 		<data>
-		ah9A2KJiThBXoC3LjkmyAibnCVE=
+		mmk8EsM+4bZNXxNv+/ejNkNDDR0=
 		</data>
 		<key>NOTICE</key>
 		<data>
@@ -94,11 +102,15 @@
 		</data>
 		<key>NarrationViewController_iPad.nib</key>
 		<data>
-		q+kYKKz1TWS3IEA0e2HOJSN83Fw=
+		FQJ8Aze5Y7Fb5mQxX8FQXVeDGn4=
 		</data>
 		<key>NarrationViewController_iPhone.nib</key>
 		<data>
-		UZQKygBCwyO23z9mK6OEKr9+2EY=
+		IyVGzYDZmfCESm4Hpsdfa7wcOmE=
+		</data>
+		<key>PageTurnViewController.nib</key>
+		<data>
+		Y5dgVrhsxaLIP1uoSr+MzD8DRG4=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -106,27 +118,27 @@
 		</data>
 		<key>System.ComponentModel.DataAnnotations.dll</key>
 		<data>
-		juwlxIaepZx7kftDS9560YgUOng=
+		kx0l8s6UIk+HRLSjB+932h9iWpA=
 		</data>
 		<key>System.Core.dll</key>
 		<data>
-		0UFvdO8lT4bnclLF5y+RkbqcL4o=
+		LeoY+PvDSsbdcXzCbF8bezhsDlw=
 		</data>
 		<key>System.Data.dll</key>
 		<data>
-		EgZRelujtFj2OqbFNwGGugBjS9U=
+		LShlJ+607V2AZFRGxtiiD0qdfdg=
 		</data>
 		<key>System.Transactions.dll</key>
 		<data>
-		DRO7xv+QVLFFsxtrCMe4tZF5Rvo=
+		8ydEA6OP90n6rp6gludHQBLZRR4=
 		</data>
 		<key>System.Xml.dll</key>
 		<data>
-		IN5pycd0HxtRWBYQX3P0rQsImy4=
+		gf+foelMHiVn0+aQ87umzyWHEes=
 		</data>
 		<key>System.dll</key>
 		<data>
-		S5iQ9zJRDkt1fZj9ZU0W2xaFFg4=
+		QCZaW2X6JZ+mzyoJfES5+IrS0Mk=
 		</data>
 		<key>bg_small.png</key>
 		<data>
@@ -142,7 +154,7 @@
 		</data>
 		<key>hadith.db</key>
 		<data>
-		ftArgWe6HZjG3hGJ5DpI4vlZlJg=
+		E4tF+ravKX6HvlJcGQyBO3ayonw=
 		</data>
 		<key>hadithCover.png</key>
 		<data>
@@ -154,11 +166,19 @@
 		</data>
 		<key>monotouch.dll</key>
 		<data>
-		7Psi1po/M/62INDOcGWQmcTrwI0=
+		zcJrEpQsXyqgBxRFn+UeFufskt8=
 		</data>
 		<key>mscorlib.dll</key>
 		<data>
-		v7whvDn2QuRW9jm/5QVZ+OJgj5w=
+		jSfJ0ZSlEF3cGkk47+zeUvGbFzo=
+		</data>
+		<key>page_cover_iPad.png</key>
+		<data>
+		AsyrWAaQ19dr3D3F0tIppXFNQj8=
+		</data>
+		<key>page_cover_iPhone.png</key>
+		<data>
+		+kU3vdxcKCEf0wmeuA2xiMS/nJg=
 		</data>
 		<key>sallallahu_alaihi_wa_sallam.png</key>
 		<data>
@@ -173,15 +193,23 @@
 	<dict>
 		<key>.DS_Store</key>
 		<data>
-		3y++sUAKzaCQmjLBz2v0kvESHgc=
+		ZaWepWzlEppeafMD++QffXi+Bmo=
+		</data>
+		<key>BookPageViewController_iPad.nib</key>
+		<data>
+		F8tfj9P0Ypy1xerFW4XRcaOFlTk=
+		</data>
+		<key>BookPageViewController_iPhone.nib</key>
+		<data>
+		E0FxxHWiMibwAwZWT2pMZwEull8=
 		</data>
 		<key>BooksViewController_iPad.nib</key>
 		<data>
-		PSGm09E14Ttoyes3DiulyH/Unpc=
+		QW+3hQG+0RjZ80wVXuXqC+/x3fU=
 		</data>
 		<key>BooksViewController_iPhone.nib</key>
 		<data>
-		3wqFNS2DtvvaKzjNJLI3wOp/9nA=
+		GjMFvmH7/AhzM02MqGZkoVwGeSA=
 		</data>
 		<key>Default-568h@2x.png</key>
 		<data>
@@ -205,23 +233,23 @@
 		</data>
 		<key>HadithBookCell.nib</key>
 		<data>
-		d2miRQ3s08jpCUW3p2/SyHHJjhE=
+		ZYBXY/ag0MEgAdcZLHJ8fd5SpTA=
 		</data>
 		<key>HadithBookCell_iPad.nib</key>
 		<data>
-		uiO5W0zgPLmZkSbjLVWS8ylADLc=
+		fxhcpz+841bM1CpAEBPtZmKCg5o=
 		</data>
 		<key>HadithBooks.exe</key>
 		<data>
-		8bB1qupPBxJhDg3Je8Vs36W3VKM=
+		WJv5tURj05BEG+G9JRniarGz7uI=
 		</data>
 		<key>HadithSourcesViewController_iPad.nib</key>
 		<data>
-		BFETY5saD9LdGkfWNhTXQDY4+6I=
+		5sRvsqyXsC5/xRb8m7YJOEw6NXw=
 		</data>
 		<key>HadithSourcesViewController_iPhone.nib</key>
 		<data>
-		txjNPWhJ6wHquYx6fApkF0efNWU=
+		82j9hov15Nh2QphO9gDrTtaURIE=
 		</data>
 		<key>Icon-60@2x.png</key>
 		<data>
@@ -253,7 +281,7 @@
 		</data>
 		<key>Mono.Data.Sqlite.dll</key>
 		<data>
-		ah9A2KJiThBXoC3LjkmyAibnCVE=
+		mmk8EsM+4bZNXxNv+/ejNkNDDR0=
 		</data>
 		<key>NOTICE</key>
 		<data>
@@ -261,11 +289,15 @@
 		</data>
 		<key>NarrationViewController_iPad.nib</key>
 		<data>
-		q+kYKKz1TWS3IEA0e2HOJSN83Fw=
+		FQJ8Aze5Y7Fb5mQxX8FQXVeDGn4=
 		</data>
 		<key>NarrationViewController_iPhone.nib</key>
 		<data>
-		UZQKygBCwyO23z9mK6OEKr9+2EY=
+		IyVGzYDZmfCESm4Hpsdfa7wcOmE=
+		</data>
+		<key>PageTurnViewController.nib</key>
+		<data>
+		Y5dgVrhsxaLIP1uoSr+MzD8DRG4=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -273,27 +305,27 @@
 		</data>
 		<key>System.ComponentModel.DataAnnotations.dll</key>
 		<data>
-		juwlxIaepZx7kftDS9560YgUOng=
+		kx0l8s6UIk+HRLSjB+932h9iWpA=
 		</data>
 		<key>System.Core.dll</key>
 		<data>
-		0UFvdO8lT4bnclLF5y+RkbqcL4o=
+		LeoY+PvDSsbdcXzCbF8bezhsDlw=
 		</data>
 		<key>System.Data.dll</key>
 		<data>
-		EgZRelujtFj2OqbFNwGGugBjS9U=
+		LShlJ+607V2AZFRGxtiiD0qdfdg=
 		</data>
 		<key>System.Transactions.dll</key>
 		<data>
-		DRO7xv+QVLFFsxtrCMe4tZF5Rvo=
+		8ydEA6OP90n6rp6gludHQBLZRR4=
 		</data>
 		<key>System.Xml.dll</key>
 		<data>
-		IN5pycd0HxtRWBYQX3P0rQsImy4=
+		gf+foelMHiVn0+aQ87umzyWHEes=
 		</data>
 		<key>System.dll</key>
 		<data>
-		S5iQ9zJRDkt1fZj9ZU0W2xaFFg4=
+		QCZaW2X6JZ+mzyoJfES5+IrS0Mk=
 		</data>
 		<key>bg_small.png</key>
 		<data>
@@ -309,7 +341,7 @@
 		</data>
 		<key>hadith.db</key>
 		<data>
-		ftArgWe6HZjG3hGJ5DpI4vlZlJg=
+		E4tF+ravKX6HvlJcGQyBO3ayonw=
 		</data>
 		<key>hadithCover.png</key>
 		<data>
@@ -321,11 +353,19 @@
 		</data>
 		<key>monotouch.dll</key>
 		<data>
-		7Psi1po/M/62INDOcGWQmcTrwI0=
+		zcJrEpQsXyqgBxRFn+UeFufskt8=
 		</data>
 		<key>mscorlib.dll</key>
 		<data>
-		v7whvDn2QuRW9jm/5QVZ+OJgj5w=
+		jSfJ0ZSlEF3cGkk47+zeUvGbFzo=
+		</data>
+		<key>page_cover_iPad.png</key>
+		<data>
+		AsyrWAaQ19dr3D3F0tIppXFNQj8=
+		</data>
+		<key>page_cover_iPhone.png</key>
+		<data>
+		+kU3vdxcKCEf0wmeuA2xiMS/nJg=
 		</data>
 		<key>sallallahu_alaihi_wa_sallam.png</key>
 		<data>
