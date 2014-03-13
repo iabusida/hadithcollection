@@ -1,18 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="AppStore|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina4.7.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HadithBooks/PageTurnViewController.cs">
     <Files>
       <File FileName="HadithBooks/Model/HadithSource.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/Info.plist" />
       <File FileName="HadithBooks/HadithSourcesViewController.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/NarrationViewController.cs" Line="180" Column="1" />
+      <File FileName="HadithBooks/NarrationViewController.cs" Line="221" Column="3" />
       <File FileName="HadithBooks/HadithSourcesViewController.designer.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/Model/HadithDataContext.cs" Line="159" Column="35" />
+      <File FileName="HadithBooks/Model/HadithDataContext.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/Model/Narration.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/HadithBookCell.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/BooksViewController.cs" Line="70" Column="1" />
+      <File FileName="HadithBooks/BooksViewController.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="HadithBooks/PageTurnViewController.cs" Line="131" Column="46" />
+      <File FileName="HadithBooks/PageTurnViewController.cs" Line="150" Column="3" />
       <File FileName="HadithBooks/PageTurnViewController.designer.cs" Line="1" Column="1" />
       <File FileName="HadithBooks/BookPageController.cs" Line="1" Column="1" />
       <File FileName="../../../Downloads/PageTurn/PageTurn/AppDelegate.cs" Line="1" Column="1" />
@@ -25,9 +25,12 @@
         <State expanded="True">
           <Node name="HadithBooks" expanded="True">
             <Node name="Model" expanded="True" />
-            <Node name="NarrationViewController.cs" selected="True" />
+            <Node name="PageTurnViewController.cs" selected="True" />
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

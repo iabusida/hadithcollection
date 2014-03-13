@@ -104,6 +104,10 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml.Serialization" />
     <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="System.Json" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\Downloads\Json60r1\Bin\Net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\bg_small.png" />
@@ -127,6 +131,7 @@
     <BundleResource Include="Resources\Default-Portrait%402x.png" />
     <BundleResource Include="Resources\page_cover_iPad.png" />
     <BundleResource Include="Resources\page_cover_iPhone.png" />
+    <BundleResource Include="Resources\favorite_on.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -163,6 +168,8 @@
     <Compile Include="BookPageViewController.designer.cs">
       <DependentUpon>BookPageViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Favorite.cs" />
+    <Compile Include="SerializeHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="HadithBookCell.xib" />

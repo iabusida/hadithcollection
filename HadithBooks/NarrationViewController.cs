@@ -26,6 +26,13 @@ namespace HadithBooks
 			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
 		}
 	
+
+		UIStringAttributes detailViewAttributes = new UIStringAttributes {
+			ForegroundColor = UIColor.White,
+			Font = UIFont.FromName("Helvetica Neue", NSUserDefaults.StandardUserDefaults.FloatForKey("fontsize")),
+			BaselineOffset =  5
+
+		};
 		public NarrationViewController (string nibName, NSBundle bundle) : base (nibName, bundle)
 		{
 		}
@@ -46,7 +53,7 @@ namespace HadithBooks
 
 
 		}
-
+			
 		public override void DidReceiveMemoryWarning ()
 		{
 			// Releases the view if it doesn't have a superview.
@@ -59,11 +66,6 @@ namespace HadithBooks
 		{
 
 			this.controller.BackClick();
-			//PageTurnViewControlle
-//			NSUserDefaults.StandardUserDefaults.SetBool (false, "loadlast");
-//			NSUserDefaults.StandardUserDefaults.Synchronize();
-
-//			this.DismissViewController(false, null);
 		}
 
 		public override void ViewDidLoad ()
@@ -82,7 +84,7 @@ namespace HadithBooks
 			var window = new UIWindow (UIScreen.MainScreen.Bounds);
 
 			if (window.Frame.Height == 568) {
-				bg_image.Frame = new RectangleF (0, 59, 320, 509);
+				//bg_image.Frame = new RectangleF (0, 59, 320, 509);
 //				NextBtn.Frame = new RectangleF(201, 484, 58, 29);
 //				PreviousBtn.Frame = new RectangleF (56,485,85,28);
 //				lblTotalCount.Frame = new RectangleF(175,455,100,21);
@@ -111,18 +113,19 @@ namespace HadithBooks
 				CurrentNarrationIndex -= 1;
 				updateScreen();
 			}
+			saveCurrentLocation (this.SourceId, this.BookId, CurrentNarrationIndex);
 		}
 
 
 		partial void NextNarration (MonoTouch.Foundation.NSObject sender)
 		{
-			this.controller.NextPage();
+			//this.controller.NextPage();
 		}
 
 
 		partial void PreviousNarration (MonoTouch.Foundation.NSObject sender)
 		{
-			this.controller.PreviousPage();
+			//	this.controller.PreviousPage();
 		}
 
 		partial void btnLanguage (MonoTouch.Foundation.NSObject sender)
@@ -159,21 +162,14 @@ namespace HadithBooks
 		public bool PreviousButtonHidden
 		{
 			get{
-				return PreviousBtn.Hidden;
+				return  HadithDataContext.GetPreviousBookNarrationCount (SourceId, BookId - 1) == 0 && CurrentNarrationIndex == 0;
 			}
 		}
 
 		public void updateScreen()
 		{
 
-			var detailViewAttributes = new UIStringAttributes {
-				ForegroundColor = UIColor.White,
-				Font = UIFont.FromName("Helvetica Neue", NSUserDefaults.StandardUserDefaults.FloatForKey("fontsize")),
-				BaselineOffset =  5
-
-			};
-
-			PreviousBtn.Hidden = HadithDataContext.GetPreviousBookNarrationCount (SourceId, BookId - 1) == 0 && CurrentNarrationIndex == 0;
+			//PreviousBtn.Hidden = HadithDataContext.GetPreviousBookNarrationCount (SourceId, BookId - 1) == 0 && CurrentNarrationIndex == 0;
 
 			if (NarrationList != null) {
 
@@ -183,7 +179,7 @@ namespace HadithBooks
 					lblTitle.Text = this.HadithBook.ArabicTitle;
 					detailView.AttributedText = new NSAttributedString (narrationText, detailViewAttributes);
 					detailView.TextAlignment = UITextAlignment.Right;
-					bntLanguageMode.SetTitle ("Show in English", UIControlState.Normal);
+					//bntLanguageMode.SetTitle ("Show in English", UIControlState.Normal);
 
 				} else {
 
@@ -194,19 +190,18 @@ namespace HadithBooks
 					detailView.AttributedText = new NSAttributedString (narrationText, detailViewAttributes);
 					detailView.TextAlignment = UITextAlignment.Left;
 					lblTitle.Text = this.HadithBook.EnglishTitle;
-					bntLanguageMode.SetTitle ("تظهر باللغة العربية", UIControlState.Normal);
+					//	bntLanguageMode.SetTitle ("تظهر باللغة العربية", UIControlState.Normal);
 
 				}
-				saveCurrentLocation (this.SourceId, this.BookId, CurrentNarrationIndex);
 				this.NarrationIndex = CurrentNarrationIndex;
 				lblTotalCount.Text = String.Format ("{0}/{1}", CurrentNarrationIndex + 1, NarrationCount);
 			}
-
 		}
 
 		public void NextNarration ()
 		{
 
+			Console.WriteLine ("I'm hit");
 			if (CurrentNarrationIndex <  NarrationCount - 1) {
 				CurrentNarrationIndex += 1;
 				updateScreen();
@@ -222,6 +217,7 @@ namespace HadithBooks
 //				}
 			
 			}
+			saveCurrentLocation (this.SourceId, this.BookId, CurrentNarrationIndex);
 
 		}
 
@@ -260,11 +256,13 @@ namespace HadithBooks
 
 		public void LoadPreviousBook ()
 		{
+			Console.WriteLine ("Hitting previous book");
 			CurrentNarrationIndex =  HadithDataContext.GetNarrationCount(SourceId, BookId - 1) - 1;
 			this.BookId -= 1;
 		}
 		public void LoadNextBook ()
 		{
+			Console.WriteLine ("Hitting next book");
 			CurrentNarrationIndex = 0;
 			this.BookId += 1;
 		}

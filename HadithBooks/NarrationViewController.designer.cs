@@ -19,7 +19,7 @@ namespace HadithBooks
 		MonoTouch.UIKit.UIButton bntLanguageMode { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UITextView detailView { get; set; }
+		public MonoTouch.UIKit.UITextView detailView { get; set; }
 
 		[Outlet]
 		MonoTouch.UIKit.UILabel lblBookName { get; set; }

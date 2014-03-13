@@ -12,6 +12,15 @@ namespace HadithBooks
 	[Register ("PageTurnViewController")]
 	partial class PageTurnViewController
 	{
+		[Outlet]
+		MonoTouch.UIKit.UIButton btnLanguageId { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel lblTItle { get; set; }
+
+		[Action ("btnAddToFavorites:")]
+		partial void btnAddToFavorites (MonoTouch.Foundation.NSObject sender);
+
 		[Action ("btnLanguage:")]
 		partial void btnLanguage (MonoTouch.Foundation.NSObject sender);
 
@@ -20,6 +29,15 @@ namespace HadithBooks
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnLanguageId != null) {
+				btnLanguageId.Dispose ();
+				btnLanguageId = null;
+			}
+
+			if (lblTItle != null) {
+				lblTItle.Dispose ();
+				lblTItle = null;
+			}
 		}
 	}
 }
